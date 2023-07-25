@@ -1,1 +1,2 @@
-# megoru.github.io
+# It's my blog.
+Have fun.

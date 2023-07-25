@@ -1,0 +1,54 @@
+a {
+  color: $link-color;
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  fill: $link-color;
+  border-color: rgba(0, 0, 160, 0.15);
+  transition-property: border-bottom, border-color, background, color, fill;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out
+}
+
+a:visited {
+  color: #7090b0;
+  border-bottom-color: rgba(112,144,176,0.2);
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: $link-hover-color;
+  text-decoration: none;
+  border-color: rgba(208, 64, 0, 0.15);
+  transition: none;
+  fill: $link-hover-color;
+}
+
+// Correct issues with buttons
+button,
+.button {
+  text-shadow: none;
+  background-image: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  color: white;
+  text-shadow: none;
+  background-image: none;
+}
+
+.anchorjs-link {
+    text-shadow: none;
+    background-image: none;
+}
+.anchorjs-link:hover,
+.anchorjs-link:focus,
+.anchorjs-link:active{
+    border: 0;
+    color: $link-hover-color;
+    text-shadow: none;
+    background-image: none;
+}

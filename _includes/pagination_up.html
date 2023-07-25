@@ -1,0 +1,11 @@
+{% if paginator.previous_page %}
+  <div class="pagination clearfix mb1 mt4">
+    <div class="left">
+      {% if paginator.page == 2 %}
+        <a class="pagination-item" href="{{ site.baseurl }}/">{{ site.text.pagination.newer }}</a>
+      {% else %}
+        <a class="pagination-item" href="{{ paginator.previous_page_path }}">{{ site.text.pagination.newer }}</a>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
