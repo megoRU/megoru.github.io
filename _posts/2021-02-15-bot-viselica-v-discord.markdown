@@ -6,10 +6,9 @@ category: dev
 tags: [hangman, discord, java]
 ---
 
-# Бот Виселица в Discord
+##  Несколько слов
 
 После того как я набрался знаний на Java я решил создать какой-то сервис который бы приносил пользу обычным людям. Первым что сделал так это Hangman бот в Discord. Вообще это не первый мой бот который я сделал для этой платформы, но это сейчас самый успешный там. Кстати бот полностью OpenSource: [GitHub Hangman](https://github.com/megoRU/HangmanDiscordBot)
-
 
 ##  Как реализован?
 
@@ -22,11 +21,8 @@ tags: [hangman, discord, java]
 ## Как строились запросы?
 
 GET: `https://api.megoru.ru/api/word`
-```mermaid
-sequenceDiagram
-Hangman ->> API: { "language": "eng" }
-API ->> Hangman : { "word": "town" }
-```
+
+![Запрос к API](/images/hangman/REST.png)
 
 ## Давай уже картинки показывай
 
@@ -35,9 +31,11 @@ API ->> Hangman : { "word": "town" }
 
 ![Запуск игры](/images/hangman/hangman-start-game.png)
 
+
 А вот так засчитывают введенные буквы
 
 ![Считывания букв](/images/hangman/hangman-letters.png)
+
 
 Кстати логотип и сами картинки статуса игры делал на заказ у замечательной [девушки](https://vk.com/club103481761).
 
