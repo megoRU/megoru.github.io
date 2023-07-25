@@ -1,7 +1,7 @@
 ---
 title: Бот Giveaway в Discord
 layout: post
-date: 2021-05-23
+date: 2021-02-08
 category: dev
 tags: [giveaway, discord, java]
 ---
