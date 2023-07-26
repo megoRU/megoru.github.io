@@ -1,2 +1,1 @@
-# It's my blog.
-Have fun.
+# Это моё портфолио
