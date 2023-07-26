@@ -4,7 +4,7 @@ email:       xoqovojz
 author:      Юрия Савина
 description: "Портфолио Юрия Савина"
 baseurl:     ""
-url:         "http://megoru.github.io"
+url:         "https://megoru.github.io"
 
 # Google services
 google_verification:
