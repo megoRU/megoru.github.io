@@ -1,5 +1,5 @@
 ---
-title: Telegram VPN бот
+title: Telegram бот для заказа VPN
 layout: post
 date: 2023-01-14
 category: dev

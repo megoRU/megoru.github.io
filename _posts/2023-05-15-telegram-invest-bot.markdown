@@ -1,5 +1,5 @@
 ---
-title: Telegram InvestNotice бот
+title: Бот для Инвестиций в Telegram
 layout: post
 date: 2023-05-15
 category: dev

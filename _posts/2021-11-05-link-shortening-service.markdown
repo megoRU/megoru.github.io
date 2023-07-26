@@ -1,5 +1,5 @@
 ---
-title: Сервис короткие ссылки (Аналог bit.ly)
+title: Сервис по коротким ссылкам
 layout: post
 date: 2021-11-05
 category: dev

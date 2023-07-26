@@ -1,5 +1,5 @@
 ---
-title: Движок блога на Java
+title: Дипломный проект — Движок блога на Java
 layout: post
 date: 2021-06-28
 category: dev
