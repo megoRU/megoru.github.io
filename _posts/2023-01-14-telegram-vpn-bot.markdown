@@ -3,7 +3,7 @@ title: Telegram VPN бот
 layout: post
 date: 2023-01-14
 category: dev
-tags: [telegram, spring-boot, java]
+tags: [telegram, vpn, spring-boot, java]
 ---
 
 ### Дисклеймер
