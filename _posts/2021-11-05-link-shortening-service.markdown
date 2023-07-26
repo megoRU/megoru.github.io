@@ -23,10 +23,12 @@ tags: [bit.ly, spring-boot, java]
 
 ![Главная страница](/images/shortening/link-shortening-main.png)
 
+<br>
 Страница с авторизацией.
 
 ![Главная страница](/images/shortening/link-shortening-login.png)
 
+<br>
 Веб панель где можно было создавать короткие ссылки и ими управлять.
 
 ![Главная страница](/images/shortening/link-shortening-web-panel.png)

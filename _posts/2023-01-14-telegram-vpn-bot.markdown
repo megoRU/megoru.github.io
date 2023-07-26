@@ -22,7 +22,26 @@ tags: [telegram, vpn, spring-boot, java]
 
 ##  Как реализован?
 
-Коммерческая тайна.
+Как обычные Telegram боты. Использовал несколько паттернов программирования, а именно: `Наблюдатель` и `Фабрику`. 
+Наблюдатель я использовал для взаимодействия с API `wg-easy`. `Включить`/`выключить`/`создать` `config` и многое другое.
+
+> Часть кода для работы наблюдателя
+```java
+public interface ListenerAdapter {
+
+    void onDisableClient(@NotNull ClientState clientState, UpdateController updateController);
+    void onEnableClient(@NotNull ClientState clientState, UpdateController updateController);
+    void onDeleteClient(@NotNull ClientState clientState, UpdateController updateController);
+    void onExtend(@NotNull BillingData billingData, UpdateController updateController);
+    void onBuy(@NotNull BillingData billingData, UpdateController updateController);
+    void onRefill(@NotNull BillingData billingData, UpdateController updateController);
+    void onBillExpired(@NotNull BillingData billingData);
+    void onRenewal(@NotNull ClientRenewal clientRenewal, UpdateController updateController);
+    void onVPNExpire(@NotNull ClientWg clientWg, UpdateController updateController);
+    void onLinked(@NotNull ClientChatId clientChatId, UpdateController updateController);
+    String onCreate(@NotNull CreateConfig createConfig, UpdateController updateController);
+}
+```
 
 ## А хоть картинки то покажешь?
 
@@ -32,10 +51,12 @@ tags: [telegram, vpn, spring-boot, java]
 
 ![UML диаграмма](/images/vpn/vpn_bot.jpg)
 
+<br>
 Панель управления конфигом
 
 ![Панель управления конфигом](/images/vpn/vpn_config.PNG)
 
+<br>
 Скачивание конфига для WireGuard
 
 ![Скачивание конфига для WireGuard](/images/vpn/vpn_download.PNG)
