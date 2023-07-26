@@ -86,10 +86,10 @@ text:
   index:
     coming_soon: 'Coming soon...'
   contact:
-    email:    'Email Address'
-    content:  'What would you like to say?'
+    email:    'Ваш Email'
+    content:  'Какой у вас вопрос?'
     subject:  'New submission!'
-    submit:   'Say Hello'
+    submit:   'Отправить'
     ajax:
       sending:  'sending..'
       sent:     'Message sent!'
