@@ -1,7 +1,7 @@
 ---
 title: Движок блога на Java
 layout: post
-date: 2021-11-05
+date: 2021-06-28
 category: dev
 tags: [диплом, skillbox, spring-boot, java]
 ---
