@@ -32,12 +32,14 @@ POST: `https://api.megoru.ru/api/participants`
 Через команду `/start` можно было с легкостью создать Giveaway. На самом деле команд было куча. От получения списка
 участников, до провидения по расписанию и перевыбор участника.
 
-![Команда /start](/images/giveaway/giveaway-post.png)
+![Команда /start](/images/giveaway/giveaway-command-start.png)
 
+<br>
 Теперь пришло время показать как выглядит сообщение с запущенным Giveaway
 
 ![Команда /start в действии](/images/giveaway/giveaway-start-work.png)
 
+<br>
 Самое время подвести итоги!
 
 ![Команда /stop в действии](/images/giveaway/giveaway-stop.png)
