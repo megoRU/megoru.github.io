@@ -25,6 +25,8 @@ enable_mathjax: false
 extended_fonts: false
 enable_anchorjs: false
 
+site:
+  email: xoqovojz
 # Disqus post comments
 # (leave blank to disable Disqus)
 disqus_shortname:
@@ -94,7 +96,7 @@ text:
       sending:  'sending..'
       sent:     'Message sent!'
       error:    'Error!'
-  thanks: 'Thanks for contacting us. We will reply as soon as possible.'
+  thanks: 'Спасибо, что написали мне. Скоро я отвечу вам.'
   og_locale: 'ru_RU'
 
 # Build settings
