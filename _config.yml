@@ -1,6 +1,6 @@
 # Site settings
 title:       Портфолио Юрия Савина
-email:       contact@megoru.ru
+email:       xoqovojz
 author:      Юрия Савина
 description: "Портфолио Юрия Савина"
 baseurl:     ""
@@ -25,8 +25,6 @@ enable_mathjax: false
 extended_fonts: false
 enable_anchorjs: false
 
-site:
-  email: xoqovojz
 # Disqus post comments
 # (leave blank to disable Disqus)
 disqus_shortname:
