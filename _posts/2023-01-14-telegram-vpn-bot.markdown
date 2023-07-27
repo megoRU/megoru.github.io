@@ -26,8 +26,8 @@ tags: [telegram, vpn, spring-boot, java]
 Наблюдатель я использовал для взаимодействия с API `wg-easy`. `Включить`/`выключить`/`создать` `config` и многое другое.
 
 > Часть кода для работы наблюдателя
-```java
 
+```
 public interface ListenerAdapter {
 
     void onDisableClient(@NotNull ClientState clientState, UpdateController updateController);
@@ -42,7 +42,6 @@ public interface ListenerAdapter {
     void onLinked(@NotNull ClientChatId clientChatId, UpdateController updateController);
     String onCreate(@NotNull CreateConfig createConfig, UpdateController updateController);
 }
-
 ```
 
 ## А хоть картинки то покажешь?

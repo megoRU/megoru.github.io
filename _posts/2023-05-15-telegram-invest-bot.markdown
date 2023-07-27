@@ -40,22 +40,22 @@ Apple и работал он только на последних актуаль
 
 Меню аккаунта.
 
-![Меню аккаунта](/images/invest/invest-account.PNG)
+![Меню аккаунта](/images/invest/invest-account.PNG){: width="600" }
 
 <br>
 Подписки на акции и не только.
 
-![Подписки на акции и не только](/images/invest/invest-subscribers.PNG)
+![Подписки на акции и не только](/images/invest/invest-subscribers.PNG){: width="350" }
 
 <br>
 Настройки объёмов.
 
-![Настройки объёмов](/images/invest/invest-volume-settings.PNG)
+![Настройки объёмов](/images/invest/invest-volume-settings.PNG){: width="400" }
 
 <br>
 Уведомления о достижении цены акции.
 
-![Уведомления о достижении цены акции](/images/invest/invest-price-notice.jpg)
+![Уведомления о достижении цены акции](/images/invest/invest-price-notice.jpg){: width="700" }
 
 ## Какое будущее у проекта?
 
