@@ -42,7 +42,7 @@ GET: `https://api.megoru.ru/api/word`
 <br>
 А вот так засчитывает введенные буквы
 
-[!Считывания букв](/images/hangman/hangman-letters.png)
+![Считывания букв](/images/hangman/hangman-letters.png)
 
 <br>
 Кстати логотип и сами картинки статуса игры делал на заказ у замечательной [девушки](https://vk.com/club103481761).
