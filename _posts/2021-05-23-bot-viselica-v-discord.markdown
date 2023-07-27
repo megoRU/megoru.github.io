@@ -37,17 +37,17 @@ GET: `https://api.megoru.ru/api/word`
 С помощью команды `/hg` любой игрок может создать игру. Кстати недавно добавил поддержку
 совместной игры. `/multi @user`
 
-![Запуск игры](/images/hangman/hangman-start-game.png)
+![Запуск игры](/images/hangman/hangman-start-game.png){: width="" }
 
 <br>
 А вот так засчитывает введенные буквы
 
-![Считывания букв](/images/hangman/hangman-letters.png)
+[!Считывания букв](/images/hangman/hangman-letters.png){: width="" }
 
 <br>
 Кстати логотип и сами картинки статуса игры делал на заказ у замечательной [девушки](https://vk.com/club103481761).
 
-![Считывания букв](/images/hangman/end-game.png)
+![Конец игры](/images/hangman/end-game.png)
 
 ## Куда будет двигаться проект в будущем?
 

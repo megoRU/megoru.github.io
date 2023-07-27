@@ -27,6 +27,7 @@ tags: [telegram, vpn, spring-boot, java]
 
 > Часть кода для работы наблюдателя
 ```java
+
 public interface ListenerAdapter {
 
     void onDisableClient(@NotNull ClientState clientState, UpdateController updateController);
@@ -41,6 +42,7 @@ public interface ListenerAdapter {
     void onLinked(@NotNull ClientChatId clientChatId, UpdateController updateController);
     String onCreate(@NotNull CreateConfig createConfig, UpdateController updateController);
 }
+
 ```
 
 ## А хоть картинки то покажешь?
@@ -54,12 +56,12 @@ public interface ListenerAdapter {
 <br>
 Панель управления конфигом
 
-![Панель управления конфигом](/images/vpn/vpn_config.PNG)
+![Панель управления конфигом](/images/vpn/vpn_config.PNG){: width="500" }
 
 <br>
 Скачивание конфига для WireGuard
 
-![Скачивание конфига для WireGuard](/images/vpn/vpn_download.PNG)
+![Скачивание конфига для WireGuard](/images/vpn/vpn_download.PNG){: width="350" }
 
 ## Какое будущее у проекта?
 
