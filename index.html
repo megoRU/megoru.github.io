@@ -3,19 +3,6 @@ layout: default
 ---
 
 <div class="home">
-  <div class="posts">
-    {% assign published_posts = site.posts | where_exp: "post", "post.draft != true" %}
-    {% assign posts_by_year = published_posts | group_by_exp: "post", "post.date | date: '%Y'"  %}
-    {% for year in posts_by_year %}
-      <h2>{{ year.name }}</h2>
-      {% for post in year.items %}
-        <p><a href="{{ post.url }}">{{ post.title }}</a> <span class="date meta">{{ post.date | date: "%m/%d"}}</span></p>
-      {% endfor %}
-    {% endfor %}
-  </div>
-</div>
-
-<ul class="archive">
   {% for post in site.posts %}
   {% unless post.next %}
   <h2>{{ post.date | date: '%Y' }}</h2>
@@ -38,4 +25,4 @@ layout: default
       <time>{{ post.date | date: "%Y-%m-%d" }}</time>
   </li>
   {% endfor %}
-</ul>
+</div>
