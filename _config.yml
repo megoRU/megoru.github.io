@@ -2,9 +2,22 @@
 title:       Портфолио Юрия Савина
 email:       xoqovojz
 author:      Юрия Савина
-description: "Портфолио Юрия Савина"
 baseurl:     ""
 url:         "https://megoru.github.io"
+
+
+name: Юрий Савин
+description: Java Backend Developer
+
+navigation:
+  - name: Портфолио
+    url: /
+  - name: Обо мне
+    url: /about
+  - name: Tags
+    url: /tags
+
+
 
 # Google services
 google_verification:
