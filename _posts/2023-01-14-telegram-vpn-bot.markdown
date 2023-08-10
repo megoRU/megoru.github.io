@@ -62,6 +62,9 @@ public interface ListenerAdapter {
 
 ![Скачивание конфига для WireGuard](/images/vpn/vpn_download.PNG){: width="350" }
 
+<br>
+Логотип заказывал у замечательной [девушки](https://vk.com/club103481761).
+
 ## Какое будущее у проекта?
 
 Закрытие.
