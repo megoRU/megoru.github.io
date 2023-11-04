@@ -1,5 +1,5 @@
 ---
-title: Бот для ... в Telegram
+title: Анонс нового проекта
 layout: post
 date: 2024-01-01
 category: dev
