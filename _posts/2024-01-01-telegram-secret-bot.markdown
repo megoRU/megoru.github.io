@@ -1,7 +1,7 @@
 ---
 title: Анонс нового проекта
 layout: post
-date: 2024-01-01
+date: 2023-12-01
 category: dev
 tags: [ telegram, spring-boot, java ]
 ---
