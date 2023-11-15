@@ -20,4 +20,4 @@ tags: [ salebot, 3xui, spring-boot, java ]
 
 ## Давай уже картинки показывай
 
-![Структура проекта](/images/salebot/intellij.png){: width="350" }
+![Структура проекта](/images/salebot/intellij.png){: width="1080" }
