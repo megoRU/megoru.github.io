@@ -2,7 +2,7 @@
 title: Микросервис для работы с Salebot и 3X-UI
 
 layout: post
-date: 2023-11-15
+date: 2023-11-10
 category: dev
 tags: [ salebot, 3xui, spring-boot, java ]
 ---
@@ -20,3 +20,4 @@ tags: [ salebot, 3xui, spring-boot, java ]
 
 ## Давай уже картинки показывай
 
+![Структура проекта](/images/salebot/intellij.PNG){: width="350" }
