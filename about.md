@@ -10,4 +10,6 @@ permalink: /about/
 
 Почта: [contact@megoru.ru](mailto:contact@megoru.ru)
 
-Telegram: [@mego_RU](https://t.me/mego_RU)
+Telegram: <a href="https://tel/legram" onclick="this.href=this.href
+.replace(/tel/,'t.me')
+.replace(/legram/,'mego_RU')" target="_blank">@mego_RU</a>
