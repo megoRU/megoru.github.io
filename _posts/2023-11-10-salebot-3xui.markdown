@@ -21,4 +21,11 @@ tag: Фриланс
 
 ## Давай уже картинки показывай
 
-![Структура проекта](/images/salebot/intellij.png){: width="1080" }
+<div class="gallery" onclick="openModal('/images/salebot/intellij.png')">
+     <img src="/images/salebot/intellij.png" alt="Структура проекта">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Структура проекта" src="/images/salebot/intellij.png">
+</div>
