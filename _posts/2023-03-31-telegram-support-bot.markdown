@@ -4,7 +4,7 @@ layout: post
 date: 2023-03-31
 category: dev
 tags: [ telegram, support, spring-boot, java ]
-tag: Pet-project
+tag: Фриланс
 ---
 
 ## Вступление
