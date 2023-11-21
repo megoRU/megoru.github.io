@@ -23,14 +23,34 @@ tag: Pet-project
 
 Главная страница сервиса.
 
-![Главная страница](/images/shortening/link-shortening-main.png)
+<div class="gallery" onclick="openModal('/images/shortening/link-shortening-main.png')">
+     <img src="/images/shortening/link-shortening-main.png" alt="Главная страница">
+</div>
 
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Главная страница" src="/images/shortening/link-shortening-main.png">
+</div>
 <br>
 Страница с авторизацией.
 
-![Главная страница](/images/shortening/link-shortening-login.png)
+<div class="gallery" onclick="openModal('/images/shortening/link-shortening-login.png')">
+     <img src="/images/shortening/link-shortening-login.png" alt="Главная страница">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Главная страница" src="/images/shortening/link-shortening-login.png">
+</div>
 
 <br>
 Веб панель где можно было создавать короткие ссылки и ими управлять.
 
-![Главная страница](/images/shortening/link-shortening-web-panel.png)
+<div class="gallery" onclick="openModal('/images/shortening/link-shortening-web-panel.png')">
+     <img src="/images/shortening/link-shortening-web-panel.png" alt="Главная страница">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Главная страница" src="/images/shortening/link-shortening-web-panel.png">
+</div>

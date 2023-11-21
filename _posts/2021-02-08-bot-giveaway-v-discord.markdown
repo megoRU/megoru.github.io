@@ -25,24 +25,52 @@ tag: Pet-project
 
 POST: `https://api.megoru.ru/api/participants`
 
-![Запрос к API](/images/giveaway/giveaway-post.png)
+<div class="gallery" onclick="openModal('/images/giveaway/giveaway-post.png')">
+     <img src="/images/giveaway/giveaway-post.png" alt="Запрос к API">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Запрос к API" src="/images/giveaway/giveaway-post.png">
+</div>
 
 ## Давай уже картинки показывай
 
 Через команду `/start` можно было с легкостью создать Giveaway. На самом деле команд было куча. От получения списка
 участников, до провидения по расписанию и перевыбор участника.
 
-![Команда /start](/images/giveaway/giveaway-command-start.png)
+<div class="gallery" onclick="openModal('/images/giveaway/giveaway-command-start.png')">
+     <img src="/images/giveaway/giveaway-command-start.png" alt="Команда /start">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Команда /start" src="/images/giveaway/giveaway-command-start.png">
+</div>
 
 <br>
 Теперь пришло время показать как выглядит сообщение с запущенным Giveaway
 
-![Команда /start в действии](/images/giveaway/giveaway-start-work.png)
+<div class="gallery" onclick="openModal('/images/giveaway/giveaway-start-work.png')">
+     <img src="/images/giveaway/giveaway-start-work.png" alt="Команда /start в действии">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Команда /start в действии" src="/images/giveaway/giveaway-start-work.png">
+</div>
 
 <br>
 Самое время подвести итоги!
 
-![Команда /stop в действии](/images/giveaway/giveaway-stop.png)
+<div class="gallery" onclick="openModal('/images/giveaway/giveaway-stop.png')">
+     <img src="/images/giveaway/giveaway-stop.png" alt="Команда /stop в действии">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Команда /stop в действии" src="/images/giveaway/giveaway-stop.png">
+</div>
 
 ## Куда будет двигаться проект в будущем?
 

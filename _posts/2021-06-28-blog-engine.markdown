@@ -24,7 +24,14 @@ Frontend мне уже был выдан изначально. Моя задач
 
 Главная страница сервиса.
 
-![Главная страница](/images/blog/main.png)
+<div class="gallery" onclick="openModal('/images/blog/main.png')">
+     <img src="/images/blog/main.png" alt="Главная страница">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Главная страница" src="/images/blog/main.png">
+</div>
 
 ## Как проходила защита диплома?
 
@@ -33,4 +40,11 @@ Frontend мне уже был выдан изначально. Моя задач
 показать работу: создание постов, лайки, комментарии и работу админ панели и т.д. И да я успешно защитил свой проект и 
 получил свой заветный диплом который мне особо не нужен, так как в IT ценятся знания, а не бумажки.
 
-![Мой диплом](/images/diploma/diploma.jpg){: width="600" }
+<div class="gallery" onclick="openModal('/images/diploma/diploma.jpg')">
+     <img src="/images/diploma/diploma.jpg" alt="Мой диплом">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Мой диплом" src="/images/diploma/diploma.jpg">
+</div>
