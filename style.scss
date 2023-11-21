@@ -56,9 +56,17 @@ body {
 span {
   display: inline-block;
   padding: 5px;
-  background-color: #f0f0f0;
+  //background-color: #f0f0f0;
   border: 0 solid #ccc;
   border-radius: 35px;
+
+  &[tag="Фриланс"] {
+    background-color: #00c4d5;
+  }
+
+  &[tag="Pet-project"] {
+    background-color: #11d200;
+  }
 }
 
 .container {
