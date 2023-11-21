@@ -4,6 +4,7 @@ layout: post
 date: 2021-07-05
 category: dev
 tags: [ social, spring-boot, java ]
+tag: Pet-project
 ---
 
 ## Вступление

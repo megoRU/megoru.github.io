@@ -4,6 +4,7 @@ layout: post
 date: 2021-02-08
 category: dev
 tags: [ giveaway, discord, java ]
+tag: Pet-project
 ---
 
 ## Несколько слов

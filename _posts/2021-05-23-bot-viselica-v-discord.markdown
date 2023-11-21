@@ -4,6 +4,7 @@ layout: post
 date: 2021-05-23
 category: dev
 tags: [ hangman, discord, java ]
+tag: Pet-project
 ---
 
 ## Несколько слов

@@ -4,7 +4,7 @@ layout: post
 date: 2023-01-14
 category: dev
 tags: [telegram, vpn, spring-boot, java]
-tag: Pet-project
+tag: Коммерческий
 ---
 
 ### Дисклеймер

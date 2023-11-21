@@ -4,6 +4,7 @@ layout: post
 date: 2022-03-16
 category: dev
 tags: [ boticord, java ]
+tag: Pet-project
 ---
 
 ## Вступление
