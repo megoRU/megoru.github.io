@@ -30,24 +30,52 @@ tag: Pet-project
 
 GET: `https://api.megoru.ru/api/word`
 
-![Запрос к API](/images/hangman/REST.png)
+<div class="gallery" onclick="openModal('/images/hangman/REST.png')">
+     <img src="/images/hangman/REST.png" alt="Запрос к API">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Запрос к API" src="/images/hangman/REST.png">
+</div>
 
 ## Давай уже картинки показывай
 
 С помощью команды `/hg` любой игрок может создать игру. Кстати недавно добавил поддержку
 совместной игры. `/multi @user`
 
-![Запуск игры](/images/hangman/hangman-start-game.png)
+<div class="gallery" onclick="openModal('/images/hangman/hangman-start-game.png')">
+     <img src="/images/hangman/hangman-start-game.png" alt="Запуск игры">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Запуск игры" src="/images/hangman/hangman-start-game.png">
+</div>
 
 <br>
 А вот так засчитывает введенные буквы
 
-![Считывания букв](/images/hangman/hangman-letters.png)
+<div class="gallery" onclick="openModal('/images/hangman/hangman-letters.png')">
+     <img src="/images/hangman/hangman-letters.png" alt="Считывания букв">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Считывания букв" src="/images/hangman/hangman-letters.png">
+</div>
 
 <br>
 Кстати логотип и сами картинки статуса игры делал на заказ у замечательной [девушки](https://vk.com/club103481761).
 
-![Конец игры](/images/hangman/end-game.png)
+<div class="gallery" onclick="openModal('/images/hangman/end-game.png')">
+     <img src="/images/hangman/end-game.png" alt="Конец игры">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Конец игры" src="/images/hangman/end-game.png">
+</div>
 
 ## Куда будет двигаться проект в будущем?
 

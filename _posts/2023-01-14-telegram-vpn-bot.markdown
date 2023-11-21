@@ -51,17 +51,38 @@ public interface ListenerAdapter {
 
 Вот UML диаграмма работы бота. (Устарела немного)
 
-![UML диаграмма](/images/vpn/vpn_bot.jpg)
+<div class="gallery" onclick="openModal('/images/vpn/vpn_bot.jpg')">
+     <img src="/images/vpn/vpn_bot.jpg" alt="UML диаграмма">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="UML диаграмма" src="/images/vpn/vpn_bot.jpg">
+</div>
 
 <br>
 Панель управления конфигом
 
-![Панель управления конфигом](/images/vpn/vpn_config.PNG){: width="500" }
+<div class="gallery" onclick="openModal('/images/vpn/vpn_config.PNG')">
+     <img src="/images/vpn/vpn_config.PNG" alt="Панель управления конфигом" style="width: 500px;">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Панель управления конфигом" src="/images/vpn/vpn_config.PNG">
+</div>
 
 <br>
 Скачивание конфига для WireGuard
 
-![Скачивание конфига для WireGuard](/images/vpn/vpn_download.PNG){: width="350" }
+<div class="gallery" onclick="openModal('/images/vpn/vpn_download.PNG')">
+     <img src="/images/vpn/vpn_download.PNG" alt="Скачивание конфига для WireGuard" style="width: 350px;">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Скачивание конфига для WireGuard" src="/images/vpn/vpn_download.PNG">
+</div>
 
 <br>
 Логотип заказывал у замечательной [девушки](https://vk.com/club103481761).

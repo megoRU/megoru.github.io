@@ -29,18 +29,39 @@ tag: Фриланс
 На стороне сотрудника это выглядит
 так:
 
-![Новый запрос](/images/support/support-new-ticket.PNG)
+<div class="gallery" onclick="openModal('/images/support/support-new-ticket.PNG')">
+     <img src="/images/support/support-new-ticket.PNG" alt="Новый запрос">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Новый запрос" src="/images/support/support-new-ticket.PNG">
+</div>
 
 <br>
 У каждого сотрудника есть доступ к меню со всеми его тикетами.<br>
 По которым он может бегать и управлять
 
-![Настройки тикета](/images/support/support-menu-ticket.PNG)
+<div class="gallery" onclick="openModal('/images/support/support-menu-ticket.PNG')">
+     <img src="/images/support/support-menu-ticket.PNG" alt="Настройки тикета">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Настройки тикета" src="/images/support/support-menu-ticket.PNG">
+</div>
 
 <br>
 Функциональные кнопки под клавиатурой для сотрудников. Они всегда видны.
 
-![Функциональные кнопки под клавиатурой](/images/support/support-keyboard-button.PNG)
+<div class="gallery" onclick="openModal('/images/support/support-keyboard-button.PNG')">
+     <img src="/images/support/support-keyboard-button.PNG" alt="Функциональные кнопки под клавиатурой">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Функциональные кнопки под клавиатурой" src="/images/support/support-keyboard-button.PNG">
+</div>
 
 ## А что ещё?
 

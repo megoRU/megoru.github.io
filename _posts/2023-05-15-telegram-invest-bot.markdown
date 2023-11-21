@@ -41,22 +41,50 @@ Apple и работал он только на последних актуаль
 
 Меню аккаунта.
 
-![Меню аккаунта](/images/invest/invest-account.PNG){: width="600" }
+<div class="gallery" onclick="openModal('/images/invest/invest-account.PNG')">
+     <img src="/images/invest/invest-account.PNG" alt="Меню аккаунта" style="width: 600px;">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Меню аккаунта" src="/images/invest/invest-account.PNG">
+</div>
 
 <br>
 Подписки на акции и не только.
 
-![Подписки на акции и не только](/images/invest/invest-subscribers.PNG){: width="350" }
+<div class="gallery" onclick="openModal('/images/invest/invest-subscribers.PNG')">
+     <img src="/images/invest/invest-subscribers.PNG" alt="Подписки на акции и не только" style="width: 350px;">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Подписки на акции и не только" src="/images/invest/invest-subscribers.PNG">
+</div>
 
 <br>
 Настройки объёмов.
 
-![Настройки объёмов](/images/invest/invest-volume-settings.PNG){: width="400" }
+<div class="gallery" onclick="openModal('/images/invest/invest-volume-settings.PNG')">
+     <img src="/images/invest/invest-volume-settings.PNG" alt="Настройки объемов" style="width: 400px;">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Настройки объемов" src="/images/invest/invest-volume-settings.PNG">
+</div>
 
 <br>
 Уведомления о достижении цены акции.
 
-![Уведомления о достижении цены акции](/images/invest/invest-price-notice.jpg){: width="700" }
+<div class="gallery" onclick="openModal('/images/invest/invest-price-notice.jpg')">
+     <img src="/images/invest/invest-price-notice.jpg" alt="Уведомления о достижении цены акции" style="width: 700px;">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="Уведомления о достижении цены акции" src="/images/invest/invest-price-notice.jpg">
+</div>
 
 ## Какое будущее у проекта?
 
