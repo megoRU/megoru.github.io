@@ -4,7 +4,7 @@ layout: post
 date: 2021-06-28
 category: dev
 tags: [ диплом, skillbox, spring-boot, java ]
-tag: Командная разработка
+tag: Диплом
 ---
 
 ## Несколько слов
