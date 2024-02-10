@@ -32,6 +32,7 @@ tag: Pet-project
 
 ## Картинки
 
+Меню добавления таймкодов
 <div class="gallery" onclick="openModal('/images/chrome/main-ui.png')">
      <img src="/images/chrome/main-ui.png" alt="Настройки расширения">
 </div>
@@ -39,4 +40,24 @@ tag: Pet-project
 <div id="myModal" class="modal" onclick="closeModal()">
      <span class="close">&#215;</span>
      <img class="modal-content" id="modalImg" alt="Настройки расширения" src="/images/chrome/main-ui.png">
+</div>
+
+Так выглядит верифицированное видео
+<div class="gallery" onclick="openModal('/images/chrome/verified-video-menu.png')">
+     <img src="/images/chrome/verified-video-menu.png" alt="верифицированное видео">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="верифицированное видео" src="/images/chrome/verified-video-menu.png">
+</div>
+
+Так выглядит меню видео на модерации
+<div class="gallery" onclick="openModal('/images/chrome/no-verified-video-menu.png')">
+     <img src="/images/chrome/no-verified-video-menu.png" alt="видео на модерации">
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+     <span class="close">&#215;</span>
+     <img class="modal-content" id="modalImg" alt="видео на модерации" src="/images/chrome/no-verified-video-menu.png">
 </div>
