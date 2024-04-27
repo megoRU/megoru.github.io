@@ -1,0 +1,8 @@
+.centeredLinks {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    margin: 10px;
+}
