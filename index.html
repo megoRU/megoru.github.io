@@ -18,11 +18,11 @@ layout: default
         {% if post.link %}
         <a href="{{ post.link }}">
             {% else %}
+            <span tag="{{ post.tag }}">{{ post.tag }}</span>
             <a href="{{ site.baseurl }}{{ post.url }}">
                 {% endif %}
                 {{ post.title }}
             </a>
-            <span tag="{{ post.tag }}">{{ post.tag }}</span>
     </li>
     {% endfor %}
 </div>
