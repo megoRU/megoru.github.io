@@ -45,7 +45,7 @@ GET: `https://api.megoru.ru/api/word`
      <img class="modal-content" id="modalImg" alt="Запрос к API" src="/images/hangman/REST.png">
 </div>
 
-## Давай уже картинки показывай
+## Картинки
 
 С помощью команды `/hg` любой игрок может создать игру. Кстати недавно добавил поддержку
 совместной игры. `/multi @user`

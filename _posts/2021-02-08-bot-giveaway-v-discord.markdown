@@ -40,7 +40,7 @@ POST: `https://api.megoru.ru/api/participants`
      <img class="modal-content" id="modalImg" alt="Запрос к API" src="/images/giveaway/giveaway-post.png">
 </div>
 
-## Давай уже картинки показывай
+## Картинки
 
 Через команду `/start` можно было с легкостью создать Giveaway. На самом деле команд было куча. От получения списка
 участников, до провидения по расписанию и перевыбор участника.

@@ -45,7 +45,7 @@ public interface ListenerAdapter {
 }
 ```
 
-## А хоть картинки то покажешь?
+## Картинки
 
 Да.
 
