@@ -29,10 +29,17 @@ permalink: /about/
     document.getElementById('age-word').textContent = ageWord;
 </script>
 
-#age, age-word { 
-padding: 0px;
-margin-top: 0px;
+<style>
+#age { 
+padding: 0;
+margin-top: 0;
 }
+
+#age-word {
+padding: 0;
+margin-top: 0;
+}
+</style>
 
 ### Связаться со мной
 
