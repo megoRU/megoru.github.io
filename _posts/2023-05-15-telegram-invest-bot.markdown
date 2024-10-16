@@ -4,7 +4,7 @@ layout: post
 date: 2023-05-15
 category: dev
 tags: [ telegram, investing, spring-boot, java ]
-tag: Коммерческий
+tag: Pet-project
 ---
 
 ## Вступление

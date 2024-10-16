@@ -23,31 +23,9 @@ tag: Коммерческий
 
 ##  Как реализован?
 
-Как обычные Telegram боты. Использовал несколько паттернов программирования, а именно: `Наблюдатель` и `Фабрику`. 
-Наблюдатель я использовал для взаимодействия с API `wg-easy/3x-ui`. `Включить`/`выключить`/`создать` `config` и многое другое.
-
-> Часть кода для работы наблюдателя
-
-```
-public interface ListenerAdapter {
-
-    void onDisableClient(@NotNull ClientState clientState, UpdateController updateController);
-    void onEnableClient(@NotNull ClientState clientState, UpdateController updateController);
-    void onDeleteClient(@NotNull ClientState clientState, UpdateController updateController);
-    void onExtend(@NotNull BillingData billingData, UpdateController updateController);
-    void onBuy(@NotNull BillingData billingData, UpdateController updateController);
-    void onRefill(@NotNull BillingData billingData, UpdateController updateController);
-    void onBillExpired(@NotNull BillingData billingData);
-    void onRenewal(@NotNull ClientRenewal clientRenewal, UpdateController updateController);
-    void onVPNExpire(@NotNull ClientWg clientWg, UpdateController updateController);
-    void onLinked(@NotNull ClientChatId clientChatId, UpdateController updateController);
-    String onCreate(@NotNull CreateConfig createConfig, UpdateController updateController);
-}
-```
+Как обычные Telegram боты. Были реализованы сервисы для взаимодействия с API [MHSanaei/3x-ui](https://github.com/MHSanaei/3x-ui): `Включить`/`выключить`/`создать config`/`получить конфиг`.
 
 ## Картинки
-
-Да.
 
 Вот UML диаграмма работы бота. (Устарела немного)
 
