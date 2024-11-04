@@ -17,10 +17,10 @@ tag: Pet-project
 
 ## Картинки
 
-Версия в разработке под IOS: 
+Версия в разработке под IOS:
 
 <div class="gallery" onclick="openModal('/images/money/money-main.jpg')">
-     <img src="/images/money/money-main.jpg" alt="Главная страница">
+     <img src="/images/money/money-main.jpg" alt="Главная страница" style="width: 350px;">
 </div>
 
 <div id="myModal" class="modal" onclick="closeModal()">
