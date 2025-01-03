@@ -273,11 +273,6 @@ img {
   }
 }
 
-//pre, code {
-//  background-color: #eee;
-//  border-radius: 3px;
-//}
-
 pre > code {
   background: none;
   padding: 0;
@@ -294,6 +289,7 @@ code {
 }
 
 pre, code {
+  background: #d7d7d7;
   font-family: 'IBM Plex Mono', monospace;
 }
 
