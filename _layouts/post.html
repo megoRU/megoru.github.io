@@ -11,7 +11,7 @@ layout: default
 
   <div class="date">
     <br>
-    {{ page.date | date: "%d.%m.%Y" }}
+      {{ page.date | date: "%d %B, %Y" | replace: "January", "Января" | replace: "February", "Февраля" | replace: "March", "Марта" | replace: "April", "Апреля" | replace: "May", "Мая" | replace: "June", "Июня" | replace: "July", "Июля" | replace: "August", "Августа" | replace: "September", "Сентября" | replace: "October", "Октября" | replace: "November", "Ноября" | replace: "December", "Декабря" }}
   </div>
 
   <div class="pagination">
