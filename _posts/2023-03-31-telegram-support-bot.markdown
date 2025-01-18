@@ -7,6 +7,11 @@ tags: [ telegram, support, spring-boot, java ]
 tag: Фриланс
 ---
 
+## Важный момент
+
+На тот момент я еще плохо разбирался в Telegram API, сейчас бы я этот проект сделал с помощью Telegram forums.
+Жаль не существует машины времени...
+
 ## Вступление
 
 Как-то раз я сидел никого не трогал как мне написала одноклассница:<br>
@@ -23,49 +28,4 @@ tag: Фриланс
 кнопки взаимодействия, как под клавиатурой, так и на самих сообщениях. Мне удалось хорошо продумать дизайн код чтобы было
 удобно. Бот поддерживал обмен картинок и историю чата и многое другое.
 
-## Картинки
-
-После того как пользователь нажимает кнопку `Поддержка` или пишет команду `/support`.<br>
-На стороне сотрудника это выглядит
-так:
-
-<div class="gallery" onclick="openModal('/images/support/support-new-ticket.PNG')">
-     <img src="/images/support/support-new-ticket.PNG" alt="Новый запрос">
-</div>
-
-<div id="myModal" class="modal" onclick="closeModal()">
-     <span class="close">&#215;</span>
-     <img class="modal-content" id="modalImg" alt="Новый запрос" src="/images/support/support-new-ticket.PNG">
-</div>
-
-<br>
-У каждого сотрудника есть доступ к меню со всеми его тикетами.<br>
-По которым он может бегать и управлять
-
-<div class="gallery" onclick="openModal('/images/support/support-menu-ticket.PNG')">
-     <img src="/images/support/support-menu-ticket.PNG" alt="Настройки тикета">
-</div>
-
-<div id="myModal" class="modal" onclick="closeModal()">
-     <span class="close">&#215;</span>
-     <img class="modal-content" id="modalImg" alt="Настройки тикета" src="/images/support/support-menu-ticket.PNG">
-</div>
-
-<br>
-Функциональные кнопки под клавиатурой для сотрудников. Они всегда видны.
-
-<div class="gallery" onclick="openModal('/images/support/support-keyboard-button.PNG')">
-     <img src="/images/support/support-keyboard-button.PNG" alt="Функциональные кнопки под клавиатурой">
-</div>
-
-<div id="myModal" class="modal" onclick="closeModal()">
-     <span class="close">&#215;</span>
-     <img class="modal-content" id="modalImg" alt="Функциональные кнопки под клавиатурой" src="/images/support/support-keyboard-button.PNG">
-</div>
-
-## А что ещё?
-
-Да много чего еще можно рассказать про этот проект, но всегда нужно знать меру.<br>
-Это был мой первый заказ на «фрилансе» и я его выполнил идеально.
-
-Заказчик: [rendallconf.ru](https://rendallconf.ru/)
+Заказчик: [rconf.ru](https://rconf.ru)
