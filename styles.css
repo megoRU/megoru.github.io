@@ -1,77 +1,89 @@
 body {
-    background-color: #f8ebf5;
-    color: #222;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #fdf4f8;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-h1 {
-    color: #ff33cc;
-    font-size: 2.5em;
+.header-content {
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+.intro h1 {
+    font-size: 36px;
+    color: #ff33cc;
 }
 
 .social-links a {
-    font-size: 1.5em;
     margin: 0 10px;
+    font-size: 24px;
     color: #ff33cc;
     text-decoration: none;
 }
 
+main {
+    padding: 0 10cm; /* Отступы слева и справа */
+    width: 100%;
+}
+
+main h3 {
+    flex: auto;
+}
+
+
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    max-width: 1200px;
-    margin: auto;
     padding: 20px;
+    max-width: 100%; /* Чтобы блок не выходил за пределы отступов */
+    margin: 0 auto; /* Центрируем контейнер */
 }
 
 .project-card {
     background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: left;
 }
 
-.project-card img {
+.project-image {
     width: 100%;
-    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.project-info {
+    padding: 15px;
 }
 
 .description {
-    color: #666;
-    font-size: 0.9em;
+    color: #777;
 }
 
-.tech-stack span {
-    background: #eee;
-    padding: 5px 10px;
-    margin: 3px;
-    border-radius: 5px;
-    font-size: 0.8em;
+.tech-stack {
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 footer {
-    margin-top: 40px;
     padding: 20px;
     background: #ff33cc;
     color: white;
+    text-align: center;
 }
 
 .order-btn, .tg-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    margin: 10px;
+    background: #d82bb4;
+    border-radius: 10px;
 }
