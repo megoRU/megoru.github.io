@@ -1,0 +1,77 @@
+body {
+    background-color: #f8ebf5;
+    color: #222;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #ff33cc;
+    font-size: 2.5em;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.social-links a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: #ff33cc;
+    text-decoration: none;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.description {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.tech-stack span {
+    background: #eee;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #ff33cc;
+    color: white;
+}
+
+.order-btn, .tg-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 10px;
+}

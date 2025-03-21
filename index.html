@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/4390d476f9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="intro">
+            <h1>привет, я — мирдук!</h1>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <span class="email">sofia@mird.uk</span>
+            </div>
+        </div>
+        <div class="about">
+            <p>я full-stack разработчик, основатель 115.studio, просидела 2k часов в IDE</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <h3>мои последние работы</h3>
+    <div id="projects-container" class="projects"></div>
+</main>
+
+<footer>
+    <a href="#" class="order-btn">Заказать проект</a>
+    <a href="#" target="_blank" class="tg-link">Написать в Telegram</a>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("projects.json")
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById("projects-container");
+                data.projects.forEach(project => {
+                    const card = document.createElement("div");
+                    card.classList.add("project-card");
+                    card.innerHTML = `
+                            <img src="${project.image}" alt="${project.name}" class="project-image">
+                            <div class="project-info">
+                                <h4>${project.name}</h4>
+                                <p class="description">${project.description}</p>
+                                <div class="tech-stack">
+                                    ${project.tech.map(tech => `<span>${tech}</span>`).join(" ")}
+                                </div>
+                            </div>
+                        `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(error => console.error("Ошибка загрузки проектов:", error));
+    });
+</script>
+</body>
+</html>

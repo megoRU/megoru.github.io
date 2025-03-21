@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "name": "Giveaway",
+      "image": "Giveaway.jpg",
+      "description": "Discord бот для определения победителей.",
+      "tech": ["Spring Boot", "Docker", "MariaDB"]
+    },
+    {
+      "name": "Hangman",
+      "image": "hangman.png",
+      "description": "Discord бот для игры в Виселицу.",
+      "tech": ["Spring Boot", "Docker", "MariaDB"]
+    },
+    {
+      "name": "NoticeMe",
+      "image": "NoticeMe.png",
+      "description": "Discord бот для уведомлений.",
+      "tech": ["Spring Boot", "Docker", "MariaDB"]
+    }
+  ]
+}
