@@ -1,28 +1,86 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="intro">
+            <h1>Привет, я — mego!</h1>
+            <p class="description">Java Backend Developer</p>
+            <div class="social-links">
+                <a href="https://t.me/mego_RU" target="_blank"><img src='assets/icons/telegram.svg' class='tech-icon' width='30' height='30' /></a>
+                <a href="https://discord.com/users/250699265389625347" target="_blank"><img src='assets/icons/discord.svg' class='tech-icon' width='30' height='30' /></a>
+                <a href="https://github.com/megoRU" target="_blank"><img src='assets/icons/github.svg' class='tech-icon' width='30' height='30' /></a>
+            </div>
+        </div>
+    </div>
+</header>
 
-<div class="home">
-    {% for post in site.posts %}
-    {% unless post.next %}
-    <h2>{{ post.date | date: '%Y' }}</h2>
-    {% else %}
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-    {% if year != nyear %}
-    <h2>{{ post.date | date: '%Y' }}</h2>
-    {% endif %}
-    {% endunless %}
+<h3>Мои последние работы</h3>
 
-    <li>
-        {% if post.link %}
-        <a href="{{ post.link }}">
-            {% else %}
-            <span tag="{{ post.tag }}">{{ post.tag }}</span>
-            <a href="{{ site.baseurl }}{{ post.url }}">
-                {% endif %}
-                {{ post.title }}
-            </a>
-    </li>
-    {% endfor %}
-</div>
+<main>
+    <div id="projects-container" class="projects"></div>
+</main>
+
+<footer>
+    <div class="footer-text">
+        <p class="order">Заказать проект...</p>
+        <p>Telegram → <a class="telegram" href="https://t.me/mego_RU" target="_blank">mego_RU</a></p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("projects.json")
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById("projects-container");
+                data.projects.forEach(project => {
+                    const card = document.createElement("div");
+                    card.classList.add("project-card");
+
+                    // Технологии и их иконки с devicon
+                    const techIcons = {
+                        "Spring Boot": "<img src='assets/icons/spring boot.svg' class='tech-icon' width='25' height='25' />",
+                        "Docker": "<img src='assets/icons/docker.svg' class='tech-icon' width='30' height='30' />",
+                        "MariaDB": "<img src='assets/icons/mariadb.svg' class='tech-icon' width='30' height='30' />",
+                        "ChatGPT": "<img src='assets/icons/chatgpt.svg' class='tech-icon' width='25' height='25' />",
+                    };
+                    // Создаем список иконок для технологий
+                    const techIconsHtml = project.tech.map(tech => techIcons[tech] || "").join(" ");
+
+                    // Создаем ссылку и оборачиваем в нее проект
+                    const projectLink = document.createElement("a");
+                    projectLink.href = project.url; // Добавляем ссылку
+                    projectLink.target = "_blank"; // Открывать в новой вкладке
+
+                    card.innerHTML = `
+                            <img src="${project.image}" alt="${project.name}" class="project-image">
+                            <div class="project-info">
+                                <h4>${project.name}</h4>
+                                <p class="description">${project.description}</p>
+                                <div class="tech-stack">
+                                    ${techIconsHtml}
+                                </div>
+                            </div>
+                        `;
+
+                    // Вставляем карточку внутрь ссылки
+                    projectLink.appendChild(card);
+                    container.appendChild(projectLink);
+                });
+            })
+            .catch(error => console.error("Ошибка загрузки проектов:", error))
+            .finally(function () {
+                document.body.classList.add('loaded')
+            });
+    });
+</script>
+
+</body>
+</html>
