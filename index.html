@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/4390d476f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -46,19 +45,23 @@
                     const card = document.createElement("div");
                     card.classList.add("project-card");
                     card.innerHTML = `
-                            <img src="${project.image}" alt="${project.name}" class="project-image">
-                            <div class="project-info">
-                                <h4>${project.name}</h4>
-                                <p class="description">${project.description}</p>
-                                <div class="tech-stack">
-                                    ${project.tech.map(tech => `<span>${tech}</span>`).join(" ")}
-                                </div>
+                        <img src="${project.image}" alt="${project.name}" class="project-image">
+                        <div class="project-info">
+                            <h4>${project.name}</h4>
+                            <p class="description">${project.description}</p>
+                            <div class="tech-stack">
+                                ${project.tech.map(tech => `<span>${tech}</span>`).join(" ")}
                             </div>
-                        `;
+                        </div>
+                    `;
                     container.appendChild(card);
                 });
             })
-            .catch(error => console.error("Ошибка загрузки проектов:", error));
+            .catch(error => console.error("Ошибка загрузки проектов:", error))
+            .finally(() => {
+                // После загрузки данных, показываем контент
+                document.body.classList.add("loaded");
+            });
     });
 </script>
 </body>

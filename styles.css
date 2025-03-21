@@ -6,6 +6,18 @@ body {
     text-align: center;
 }
 
+body {
+    visibility: hidden; /* Скрываем все содержимое */
+    opacity: 0; /* Делаем страницу полностью прозрачной */
+    transition: opacity 0.3s ease-in; /* Плавный переход */
+}
+
+body.loaded {
+    visibility: visible; /* Показываем содержимое */
+    opacity: 1; /* Восстанавливаем видимость */
+}
+
+
 .header-content {
     justify-content: space-between;
     padding: 40px;
