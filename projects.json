@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "name": "Дешёвый VPN",
+      "image": "assets/images/vpn.jpg",
+      "description": "Telegram бот для заказа VPN",
+      "url": "https://t.me/mego_vpn_bot",
+      "tech": ["Spring Boot", "Docker", "MariaDB", "ChatGPT"]
+    },
+    {
+      "name": "ScanFit",
+      "image": "assets/images/ScanFit.jpg",
+      "description": "Telegram бот для расчета КБЖУ",
+      "url": "https://t.me/scan_fit_bot",
+      "tech": ["Spring Boot", "Docker", "MariaDB", "ChatGPT"]
+    },
+    {
       "name": "Giveaway",
       "image": "assets/images/giveaway.jpg",
       "description": "Discord бот для определения победителей.",
@@ -12,7 +26,7 @@
       "image": "assets/images/hangman.png",
       "description": "Discord бот для игры в Виселицу.",
       "url": "https://discord.com/oauth2/authorize?client_id=845974873682608129",
-      "tech": ["Spring Boot", "Docker", "MariaDB"]
+      "tech": ["Spring Boot", "Docker", "MariaDB", "ChatGPT"]
     },
     {
       "name": "NoticeMe",
