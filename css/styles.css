@@ -72,7 +72,7 @@ main h3 {
 }
 
 .projects a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 a:visited {
@@ -137,4 +137,32 @@ footer .footer-text .order {
     position: relative;
     display: inline-block;
     margin-right: 5px;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 25px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+        padding: 10px;
+    }
+
+    .project-card {
+        margin: 10px 0; /* Добавляем отступы между карточками */
+    }
+
+    .project-image {
+        height: 150px; /* Уменьшаем высоту изображения на мобильных устройствах */
+    }
+
+    .project-info {
+        padding: 10px;
+    }
+
+    .tech-stack {
+        font-size: 18px; /* Уменьшаем размер шрифта для мобильных */
+    }
 }
