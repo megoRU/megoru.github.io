@@ -29,10 +29,19 @@ body.loaded {
 }
 
 .social-links a {
+    transition: filter 0.1s ease-in-out;
     margin: 0 10px;
     font-size: 24px;
     color: rgb(33 33 33);
     text-decoration: none;
+}
+
+.social-links a {
+    transition: filter 0.1s ease-in-out;
+}
+
+.social-links a:hover {
+    filter: brightness(0.9); /* Затемняет иконку */
 }
 
 main {
@@ -80,6 +89,14 @@ main h3 {
 a:visited {
     text-decoration: none; /* Убирает подчеркивание */
     color: inherit; /* Сохраняет цвет текста ссылки */
+}
+
+.project-card {
+    transition: background-color 0.1s ease-in-out;
+}
+
+.project-card:hover {
+    background-color: #f3f3f3; /* Светло-серый */
 }
 
 .project-info {
