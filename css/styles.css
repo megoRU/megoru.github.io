@@ -116,6 +116,7 @@ footer {
 
 footer .footer-text {
     margin-right: 20px; /* Отступ между текстом и кнопками */
+    margin-bottom: 20px;
 }
 
 footer .footer-text .order {
