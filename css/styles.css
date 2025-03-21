@@ -72,6 +72,7 @@ main h3 {
 }
 
 .projects a {
+    color: black;
     text-decoration: none;
 }
 
@@ -166,8 +167,13 @@ footer .footer-text .order {
         font-size: 18px; /* Уменьшаем размер шрифта для мобильных */
     }
 
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
     a:visited {
         text-decoration: none;
-        color: inherit;
+        color: black;
     }
 }
