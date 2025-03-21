@@ -17,7 +17,6 @@ body.loaded {
     opacity: 1; /* Восстанавливаем видимость */
 }
 
-
 .header-content {
     justify-content: space-between;
     padding: 40px;
@@ -45,7 +44,6 @@ main {
 main h3 {
     flex: auto;
 }
-
 
 .projects {
     display: grid;
@@ -80,9 +78,19 @@ main h3 {
     color: #777;
 }
 
+.tech-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; /* если нужно отступить между иконками */
+}
+
 .tech-stack {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 20px;
+}
+
+.fab {
+    margin-right: 5px;
 }
 
 footer {
@@ -104,7 +112,6 @@ footer .footer-text .order {
     font-weight: bold; /* Делаем текст жирным */
     margin-bottom: 10px; /* Отступ снизу */
 }
-
 
 .order-btn, .tg-link {
     display: inline-block;

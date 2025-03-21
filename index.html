@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="https://kit.fontawesome.com/4390d476f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -31,7 +32,8 @@
 <footer>
     <div class="footer-text">
         <p class="order">Заказать проект...</p>
-        <p>Пишите мне в Telegram → mego_RU</p>
+        <p>Пишите нам в студию → studio115</p>
+        <p>Или мне в Telegram → mirdukkk</p>
     </div>
 </footer>
 
@@ -44,25 +46,37 @@
                 data.projects.forEach(project => {
                     const card = document.createElement("div");
                     card.classList.add("project-card");
+
+                    // Технологии и их иконки с devicon
+                    const techIcons = {
+                        "Spring Boot": "<img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg\" width='25' height='25'/>",
+                        "Docker": "<img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg\" width='30' height='30' />",
+                        "MariaDB": "<img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg\" width='30' height='30'/>"
+                    };
+                    // Создаем список иконок для технологий
+                    const techIconsHtml = project.tech.map(tech => techIcons[tech] || "").join(" ");
+
                     card.innerHTML = `
-                        <img src="${project.image}" alt="${project.name}" class="project-image">
-                        <div class="project-info">
-                            <h4>${project.name}</h4>
-                            <p class="description">${project.description}</p>
-                            <div class="tech-stack">
-                                ${project.tech.map(tech => `<span>${tech}</span>`).join(" ")}
+                            <img src="${project.image}" alt="${project.name}" class="project-image">
+                            <div class="project-info">
+                                <h4>${project.name}</h4>
+                                <p class="description">${project.description}</p>
+                                <div class="tech-stack">
+                                    ${techIconsHtml}
+                                </div>
                             </div>
-                        </div>
-                    `;
+                        `;
                     container.appendChild(card);
                 });
             })
             .catch(error => console.error("Ошибка загрузки проектов:", error))
-            .finally(() => {
-                // После загрузки данных, показываем контент
-                document.body.classList.add("loaded");
+            .finally(function () {
+                document.body.classList.add('loaded')
             });
     });
 </script>
+
+
 </body>
+
 </html>
