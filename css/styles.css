@@ -93,6 +93,9 @@ a:visited {
 .tech-stack {
     margin-top: 10px;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
 }
 
 .fab {
