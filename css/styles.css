@@ -165,4 +165,9 @@ footer .footer-text .order {
     .tech-stack {
         font-size: 18px; /* Уменьшаем размер шрифта для мобильных */
     }
+
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
 }
