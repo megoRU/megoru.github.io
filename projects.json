@@ -4,18 +4,21 @@
       "name": "Giveaway",
       "image": "Giveaway.jpg",
       "description": "Discord бот для определения победителей.",
+      "url": "https://discord.com/oauth2/authorize?client_id=808277484524011531",
       "tech": ["Spring Boot", "Docker", "MariaDB"]
     },
     {
       "name": "Hangman",
       "image": "hangman.png",
       "description": "Discord бот для игры в Виселицу.",
+      "url": "https://discord.com/oauth2/authorize?client_id=845974873682608129",
       "tech": ["Spring Boot", "Docker", "MariaDB"]
     },
     {
       "name": "NoticeMe",
       "image": "NoticeMe.png",
       "description": "Discord бот для уведомлений.",
+      "url": "https://discord.com/oauth2/authorize?client_id=1039911109911658557",
       "tech": ["Spring Boot", "Docker", "MariaDB"]
     }
   ]

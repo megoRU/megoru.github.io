@@ -25,14 +25,19 @@ body.loaded {
 
 .intro h1 {
     font-size: 36px;
-    color: #ff33cc;
+    color: rgb(33 33 33);
 }
 
 .social-links a {
     margin: 0 10px;
     font-size: 24px;
-    color: #ff33cc;
+    color: rgb(33 33 33);
     text-decoration: none;
+}
+
+.telegram {
+    text-decoration: none;
+    color: rgb(33 33 33);
 }
 
 main {
@@ -61,6 +66,7 @@ main h3 {
     border-radius: 20px;
     overflow: hidden;
     text-align: left;
+    position: relative;
 }
 
 .project-image {
@@ -70,18 +76,16 @@ main h3 {
     border-radius: 20px 20px 0 0;
 }
 
+.projects a {
+    text-decoration: none
+}
+
 .project-info {
     padding: 15px;
 }
 
 .description {
     color: #777;
-}
-
-.tech-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px; /* если нужно отступить между иконками */
 }
 
 .tech-stack {
@@ -126,4 +130,15 @@ footer .footer-text .order {
     margin: 0;
     text-align: left;
     font-size: 18px;
+}
+
+.tech-icon-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.tech-icon {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
 }

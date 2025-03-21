@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
     <script src="https://kit.fontawesome.com/4390d476f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,9 +15,10 @@
             <h1>Привет, я — mego!</h1>
             <p class="description">Java Backend Developer</p>
             <div class="social-links">
-                <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://t.me/mego_RU" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://discord.com/users/250699265389625347" target="_blank"><i
+                        class="fab fa-discord"></i></a>
+                <a href="https://github.com/megoRU" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </div>
@@ -32,8 +33,7 @@
 <footer>
     <div class="footer-text">
         <p class="order">Заказать проект...</p>
-        <p>Пишите нам в студию → studio115</p>
-        <p>Или мне в Telegram → mirdukkk</p>
+        <p>Telegram → <a class="telegram" href="https://t.me/mego_RU" target="_blank">mego_RU</a></p>
     </div>
 </footer>
 
@@ -49,12 +49,17 @@
 
                     // Технологии и их иконки с devicon
                     const techIcons = {
-                        "Spring Boot": "<img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg\" width='25' height='25'/>",
-                        "Docker": "<img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg\" width='30' height='30' />",
-                        "MariaDB": "<img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg\" width='30' height='30'/>"
+                        "Spring Boot": "<div class='tech-icon'><img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' width='25' height='25' /></div>",
+                        "Docker": "<div class='tech-icon'><img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' width='30' height='30' /></div>",
+                        "MariaDB": "<div class='tech-icon'><img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg' width='30' height='30' /></div>"
                     };
                     // Создаем список иконок для технологий
                     const techIconsHtml = project.tech.map(tech => techIcons[tech] || "").join(" ");
+
+                    // Создаем ссылку и оборачиваем в нее проект
+                    const projectLink = document.createElement("a");
+                    projectLink.href = project.url; // Добавляем ссылку
+                    projectLink.target = "_blank"; // Открывать в новой вкладке
 
                     card.innerHTML = `
                             <img src="${project.image}" alt="${project.name}" class="project-image">
@@ -66,7 +71,10 @@
                                 </div>
                             </div>
                         `;
-                    container.appendChild(card);
+
+                    // Вставляем карточку внутрь ссылки
+                    projectLink.appendChild(card);
+                    container.appendChild(projectLink);
                 });
             })
             .catch(error => console.error("Ошибка загрузки проектов:", error))
@@ -76,7 +84,5 @@
     });
 </script>
 
-
 </body>
-
 </html>
