@@ -95,11 +95,11 @@ a:visited {
     font-size: 20px;
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
-.fab {
-    margin-right: 5px;
+.tech-stack img {
+    margin-right: 8px;
 }
 
 footer {
