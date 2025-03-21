@@ -9,7 +9,7 @@
     },
     {
       "name": "ScanFit",
-      "image": "assets/images/ScanFit.jpg",
+      "image": "assets/images/scanFit.jpg",
       "description": "Telegram бот для расчета КБЖУ",
       "url": "https://t.me/scan_fit_bot",
       "tech": ["Spring Boot", "Docker", "MariaDB", "ChatGPT"]
