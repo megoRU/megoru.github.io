@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "Дешёвый VPN",
-      "image": "assets/images/vpn.jpg",
+      "image": "assets/images/vpn.png",
       "description": "Telegram бот для заказа VPN",
       "url": "https://t.me/mego_vpn_bot",
       "tech": ["Spring Boot", "Docker", "MariaDB", "ChatGPT"]
@@ -16,7 +16,7 @@
     },
     {
       "name": "Giveaway",
-      "image": "assets/images/giveaway.jpg",
+      "image": "assets/images/giveaway.png",
       "description": "Discord бот для определения победителей.",
       "url": "https://discord.com/oauth2/authorize?client_id=808277484524011531",
       "tech": ["Spring Boot", "Docker", "MariaDB"]
