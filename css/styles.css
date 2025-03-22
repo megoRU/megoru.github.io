@@ -201,6 +201,10 @@ footer .footer-text .order {
     visibility: visible;
 }
 
+.tooltip p {
+    padding-top: 5px;
+}
+
 /* Медиазапросы для мобильных устройств */
 @media (max-width: 768px) {
     .intro h1 {
