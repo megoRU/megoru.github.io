@@ -92,6 +92,7 @@ a:visited {
 }
 
 .project-card {
+    overflow: visible; /* Позволяем всплывающим элементам выходить за границы */
     transition: background-color 0.1s ease-in-out;
 }
 
@@ -161,6 +162,35 @@ footer .footer-text .order {
     display: inline-block;
     margin-right: 5px;
 }
+
+.tech-icon-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.tech-icon-wrapper:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    overflow: visible; /* Гарантируем, что не будет обрезаться */
+}
+
+
 
 /* Медиазапросы для мобильных устройств */
 @media (max-width: 768px) {

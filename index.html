@@ -17,9 +17,12 @@
             <h1>Привет, я mego!</h1>
             <p class="description">Java Backend Developer</p>
             <div class="social-links">
-                <a href="https://t.me/mego_RU" target="_blank"><img src='assets/icons/telegram.svg' class='tech-icon' width='30' height='30' alt=''/></a>
-                <a href="https://discord.com/users/250699265389625347" target="_blank"><img src='assets/icons/discord.svg' class='tech-icon' width='30' height='30' alt=''/></a>
-                <a href="https://github.com/megoRU" target="_blank"><img src='assets/icons/github.svg' class='tech-icon' width='30' height='30' alt=''/></a>
+                <a href="https://t.me/mego_RU" target="_blank"><img src='assets/icons/telegram.svg' class='tech-icon'
+                                                                    width='30' height='30' alt=''/></a>
+                <a href="https://discord.com/users/250699265389625347" target="_blank"><img
+                        src='assets/icons/discord.svg' class='tech-icon' width='30' height='30' alt=''/></a>
+                <a href="https://github.com/megoRU" target="_blank"><img src='assets/icons/github.svg' class='tech-icon'
+                                                                         width='30' height='30' alt=''/></a>
             </div>
         </div>
     </div>
@@ -50,10 +53,10 @@
 
                     // Технологии и их иконки с devicon
                     const techIcons = {
-                        "Spring Boot": "<img src='assets/icons/spring boot.svg' class='tech-icon' width='25' height='25' alt=''/>",
-                        "Docker": "<img src='assets/icons/docker.svg' class='tech-icon' width='30' height='30' alt=''/>",
-                        "MariaDB": "<img src='assets/icons/mariadb.svg' class='tech-icon' width='30' height='30' alt=''/>",
-                        "ChatGPT": "<img src='assets/icons/chatgpt.svg' class='tech-icon' width='26' height='26' alt=''/>",
+                        "Spring Boot": "<div class='tech-icon-wrapper'><img src='assets/icons/spring boot.svg' class=tech-icon width='25' height='25' alt=''/><div class='tooltip'>Spring Boot</div></div>",
+                        "Docker": "<div class='tech-icon-wrapper'><img src='assets/icons/docker.svg' class='tech-icon' width='30' height='30' alt=''/><div class='tooltip'>Docker</div></div>",
+                        "MariaDB": "<div class='tech-icon-wrapper'><img src='assets/icons/mariadb.svg' class='tech-icon' width='30' height='30' alt=''/><div class='tooltip'>MariaDB</div></div>",
+                        "ChatGPT": "<div class='tech-icon-wrapper'><img src='assets/icons/chatgpt.svg' class='tech-icon' width='26' height='26' alt=''/><div class='tooltip'>ChatGPT</div></div>",
                     };
                     // Создаем список иконок для технологий
                     const techIconsHtml = project.tech.map(tech => techIcons[tech] || "").join(" ");
