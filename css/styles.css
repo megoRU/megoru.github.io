@@ -178,19 +178,28 @@ footer .footer-text .order {
     bottom: 120%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
+    background-color: white;
+    color: black;
+    padding: 15px 20px; /* Увеличиваем отступы */
+    border-radius: 8px;
+    font-size: 16px; /* Увеличиваем шрифт */
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out;
-    overflow: visible; /* Гарантируем, что не будет обрезаться */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 160px;
+    text-align: left;
 }
 
-
+.tech-icon-wrapper:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
 
 /* Медиазапросы для мобильных устройств */
 @media (max-width: 768px) {
