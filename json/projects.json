@@ -15,6 +15,13 @@
       "tech": ["Spring Boot", "Docker", "MariaDB", "ChatGPT"]
     },
     {
+      "name": "Rconf",
+      "image": "assets/images/rconf.png",
+      "description": "Реализация поддержки в Telegram",
+      "url": "https://rconf.ru",
+      "tech": ["Spring Boot", "Docker", "MariaDB"]
+    },
+    {
       "name": "Giveaway",
       "image": "assets/images/giveaway.png",
       "description": "Discord бот для определения победителей.",
