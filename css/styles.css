@@ -67,7 +67,7 @@ main h3 {
     background: white;
     padding: 0;
     border-radius: 20px;
-    overflow: hidden;
+    overflow: visible;
     text-align: left;
     position: relative;
 }
@@ -77,6 +77,7 @@ main h3 {
     height: 180px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
+    background-color: #eee;
 }
 
 .projects a {
@@ -87,11 +88,6 @@ main h3 {
 a:visited {
     text-decoration: none; /* Убирает подчеркивание */
     color: inherit; /* Сохраняет цвет текста ссылки */
-}
-
-.project-card {
-    overflow: visible; /* Позволяем всплывающим элементам выходить за границы */
-    transition: background-color 0.1s ease-in-out;
 }
 
 .project-card:hover {
@@ -203,51 +199,6 @@ footer .footer-text .order {
     padding-top: 5px;
 }
 
-/* Медиазапросы для мобильных устройств */
-@media (max-width: 768px) {
-    .intro h1 {
-        font-size: 25px;
-    }
-
-    .projects {
-        grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
-        padding: 10px;
-    }
-
-    .project-card {
-        margin: 10px 0; /* Добавляем отступы между карточками */
-    }
-
-    .project-image {
-        height: 150px; /* Уменьшаем высоту изображения на мобильных устройствах */
-    }
-
-    .project-info {
-        padding: 10px;
-    }
-
-    .tech-stack {
-        font-size: 18px; /* Уменьшаем размер шрифта для мобильных */
-    }
-
-    .tooltip {
-        visibility: hidden;
-    }
-
-    .tech-icon-wrapper:hover .tooltip {
-        visibility: hidden;
-    }
-
-    a {
-        color: black;
-        text-decoration: none;
-    }
-
-    a:visited {
-        text-decoration: none;
-        color: black;
-    }
-}
 
 .skeleton-card {
     border-radius: 20px;
@@ -305,5 +256,68 @@ footer .footer-text .order {
     }
     100% {
         background-position: 200% 0;
+    }
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .skeleton-card .image {
+        height: 160px;
+    }
+
+    .skeleton-card .title {
+        margin-top: 35px;
+        margin-left: 10px;
+    }
+
+    .skeleton-card .text {
+        margin-left: 10px;
+    }
+
+    .skeleton-card .buttons {
+        margin-left: 10px;
+    }
+
+    .intro h1 {
+        font-size: 25px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+        padding: 10px;
+    }
+
+    .project-card {
+        margin: 10px 0; /* Добавляем отступы между карточками */
+    }
+
+    .project-image {
+        height: 150px; /* Уменьшаем высоту изображения на мобильных устройствах */
+    }
+
+    .project-info {
+        padding: 10px;
+    }
+
+    .tech-stack {
+        font-size: 18px; /* Уменьшаем размер шрифта для мобильных */
+    }
+
+    .tooltip {
+        visibility: hidden;
+    }
+
+    .tech-icon-wrapper:hover .tooltip {
+        visibility: hidden;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: black;
     }
 }
