@@ -6,11 +6,9 @@ body {
     text-align: center;
 }
 
-/*body {*/
-/*    visibility: hidden; !* Скрываем все содержимое *!*/
-/*    opacity: 0; !* Делаем страницу полностью прозрачной *!*/
-/*    transition: opacity 0.3s ease-in; !* Плавный переход *!*/
-/*}*/
+html {
+    overflow-y: scroll;
+}
 
 body.loaded {
     visibility: visible; /* Показываем содержимое */
@@ -187,7 +185,7 @@ footer .footer-text .order {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -273,27 +271,31 @@ footer .footer-text .order {
 }
 
 .skeleton-card .image {
-    height: 200px;
+    height: 180px;
     border-radius: 20px 20px 0 0;
 }
 
 .skeleton-card .title {
     height: 16px;
-    margin: 16px 16px 8px 16px;
-    width: 60%;
+    margin-top: 45px;
+    margin-left: 16px;
+    width: 30%;
 }
 
 .skeleton-card .text {
-    height: 12px;
-    margin: 0 16px 8px 16px;
-    width: 90%;
+    height: 16px;
+    margin-top: 5px;
+    margin-left: 16px;
+    width: 70%;
 }
 
 .skeleton-card .buttons {
     display: flex;
     gap: 8px;
-    margin: 16px;
-    height: 32px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    margin-left: 16px;
+    height: 30px;
     width: 40%;
 }
 
