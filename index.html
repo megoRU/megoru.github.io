@@ -58,6 +58,8 @@
             container.appendChild(createSkeletonCard());
         }
 
+        document.querySelector("footer").style.display = "flex";
+
         fetch("json/projects.json")
             .then(response => response.json())
             .then(data => {

@@ -123,11 +123,11 @@ a:visited {
 footer {
     padding: 20px;
     color: #000000;
-    display: flex;
     justify-content: flex-start; /* Выравнивание элементов по левому краю */
     align-items: center; /* Вертикальное выравнивание */
     max-width: 1200px; /* Максимальная ширина футера */
     margin: 0 auto; /* Центрирование футера на странице */
+    display: none;
 }
 
 .telegram {
