@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -27,7 +23,6 @@
         </div>
     </div>
 </header>
-
 <h3>Мои последние работы</h3>
 
 <main>
@@ -42,50 +37,64 @@
 </footer>
 
 <script>
+    const container = document.getElementById("projects-container");
+
+    const createSkeletonCard = () => {
+        const skeleton = document.createElement("div");
+        skeleton.className = "skeleton-card";
+        skeleton.innerHTML = `
+            <div class="skeleton-image"></div>
+            <div class="skeleton-text title"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-tech-stack"></div>
+        `;
+        return skeleton;
+    };
+
     document.addEventListener("DOMContentLoaded", () => {
+        // Показываем 3 скелетона
+        for (let i = 0; i < 6; i++) {
+            container.appendChild(createSkeletonCard());
+        }
+
         fetch("json/projects.json")
             .then(response => response.json())
             .then(data => {
-                const container = document.getElementById("projects-container");
+                container.innerHTML = ""; // Удаляем скелетоны
+
+                const techIcons = {
+                    "Spring Boot": "<div class='tech-icon-wrapper'><img src='assets/icons/spring boot.svg' class='tech-icon' width='25' height='25' alt=''/><div class='tooltip'><img src='assets/icons/spring boot.svg' width='25' height='25' alt=''/><div><strong>Spring Boot</strong><p style='margin: 0; font-size: 16px; color: #555;'>Фреймворк для создания<br>Java приложений</p></div></div></div>",
+                    "Docker": "<div class='tech-icon-wrapper'><img src='assets/icons/docker.svg' class='tech-icon' width='30' height='30' alt=''/><div class='tooltip'><img src='assets/icons/docker.svg' width='30' height='30' alt=''/><div><strong>Docker</strong><p style='margin: 0; font-size: 16px; color: #555;'>Технология контейнеризации</p></div></div></div>",
+                    "MariaDB": "<div class='tech-icon-wrapper'><img src='assets/icons/mariadb.svg' class='tech-icon' width='30' height='30' alt=''/><div class='tooltip'><img src='assets/icons/mariadb.svg' width='30' height='30' alt=''/><div><strong>MariaDB</strong><p style='margin: 0; font-size: 16px; color: #555;'>Открытая СУБД, форк MySQL</p></div></div></div>",
+                    "ChatGPT": "<div class='tech-icon-wrapper'><img src='assets/icons/chatgpt.svg' class='tech-icon' width='26' height='26' alt=''/><div class='tooltip'><img src='assets/icons/chatgpt.svg' width='26' height='26' alt=''/><div><strong>ChatGPT</strong><p style='margin: 0; font-size: 16px; color: #555;'>Искусственный интеллект<br>для общения</p></div></div></div>"
+                };
+
                 data.projects.forEach(project => {
                     const card = document.createElement("div");
                     card.classList.add("project-card");
 
-                    // Технологии и их иконки с devicon
-                    const techIcons = {
-                        "Spring Boot": "<div class='tech-icon-wrapper'><img src='assets/icons/spring boot.svg' class='tech-icon' width='25' height='25' alt=''/><div class='tooltip'><img src='assets/icons/spring boot.svg' width='25' height='25' alt=''/><div><strong>Spring Boot</strong><p style='margin: 0; font-size: 16px; color: #555;'>Фреймворк для создания<br>Java приложений</p></div></div></div>",
-                        "Docker": "<div class='tech-icon-wrapper'><img src='assets/icons/docker.svg' class='tech-icon' width='30' height='30' alt=''/><div class='tooltip'><img src='assets/icons/docker.svg' width='30' height='30' alt=''/><div><strong>Docker</strong><p style='margin: 0; font-size: 16px; color: #555;'>Технология контейнеризации</p></div></div></div>",
-                        "MariaDB": "<div class='tech-icon-wrapper'><img src='assets/icons/mariadb.svg' class='tech-icon' width='30' height='30' alt=''/><div class='tooltip'><img src='assets/icons/mariadb.svg' width='30' height='30' alt=''/><div><strong>MariaDB</strong><p style='margin: 0; font-size: 16px; color: #555;'>Открытая СУБД, форк MySQL</p></div></div></div>",
-                        "ChatGPT": "<div class='tech-icon-wrapper'><img src='assets/icons/chatgpt.svg' class='tech-icon' width='26' height='26' alt=''/><div class='tooltip'><img src='assets/icons/chatgpt.svg' width='26' height='26' alt=''/><div><strong>ChatGPT</strong><p style='margin: 0; font-size: 16px; color: #555;'>Искусственный интеллект<br>для общения</p></div></div></div>"
-                    };
-
-                    // Создаем список иконок для технологий
                     const techIconsHtml = project.tech.map(tech => techIcons[tech] || "").join(" ");
 
-                    // Создаем ссылку и оборачиваем в нее проект
                     const projectLink = document.createElement("a");
-                    projectLink.href = project.url; // Добавляем ссылку
-                    projectLink.target = "_blank"; // Открывать в новой вкладке
+                    projectLink.href = project.url;
+                    projectLink.target = "_blank";
 
                     card.innerHTML = `
-                            <img src="${project.image}" alt="${project.name}" class="project-image">
-                            <div class="project-info">
-                                <h4>${project.name}</h4>
-                                <p class="description">${project.description}</p>
-                                <div class="tech-stack">
-                                    ${techIconsHtml}
-                                </div>
-                            </div>
-                        `;
+                        <img src="${project.image}" alt="${project.name}" class="project-image">
+                        <div class="project-info">
+                            <h4>${project.name}</h4>
+                            <p class="description">${project.description}</p>
+                            <div class="tech-stack">${techIconsHtml}</div>
+                        </div>
+                    `;
 
-                    // Вставляем карточку внутрь ссылки
                     projectLink.appendChild(card);
                     container.appendChild(projectLink);
                 });
             })
             .catch(error => console.error("Ошибка загрузки проектов:", error))
-            .finally(function () {
-                document.body.classList.add('loaded')
+            .finally(() => {
+                document.body.classList.add('loaded');
             });
     });
 </script>

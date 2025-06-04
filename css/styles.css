@@ -6,11 +6,11 @@ body {
     text-align: center;
 }
 
-body {
-    visibility: hidden; /* Скрываем все содержимое */
-    opacity: 0; /* Делаем страницу полностью прозрачной */
-    transition: opacity 0.3s ease-in; /* Плавный переход */
-}
+/*body {*/
+/*    visibility: hidden; !* Скрываем все содержимое *!*/
+/*    opacity: 0; !* Делаем страницу полностью прозрачной *!*/
+/*    transition: opacity 0.3s ease-in; !* Плавный переход *!*/
+/*}*/
 
 body.loaded {
     visibility: visible; /* Показываем содержимое */
@@ -248,5 +248,74 @@ footer .footer-text .order {
     a:visited {
         text-decoration: none;
         color: black;
+    }
+}
+
+.skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.skeleton-card {
+    border-radius: 20px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 180px;
+    background: #ddd;
+    border-radius: 16px;
+}
+
+.skeleton-text {
+    height: 16px;
+    background: #e0e0e0;
+    margin-top: 12px;
+    border-radius: 6px;
+}
+
+.skeleton-text.title {
+    width: 60%;
+    height: 20px;
+}
+
+.skeleton-tech-stack {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.skeleton-tech-stack::before,
+.skeleton-tech-stack::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 8px;
+}
+
+.skeleton-image,
+.skeleton-text,
+.skeleton-tech-stack::before,
+.skeleton-tech-stack::after {
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
     }
 }
