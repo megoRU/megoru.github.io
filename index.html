@@ -99,10 +99,7 @@
                     container.appendChild(projectLink);
                 });
             })
-            .catch(error => console.error("Ошибка загрузки проектов:", error))
-            .finally(() => {
-                document.body.classList.add('loaded');
-            });
+            .catch(error => console.error("Ошибка загрузки проектов:", error));
     });
 </script>
 
