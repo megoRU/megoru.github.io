@@ -43,16 +43,17 @@
         const skeleton = document.createElement("div");
         skeleton.className = "skeleton-card";
         skeleton.innerHTML = `
-            <div class="skeleton-image"></div>
-            <div class="skeleton-text title"></div>
-            <div class="skeleton-text"></div>
-            <div class="skeleton-tech-stack"></div>
+             <div class="image"></div>
+             <div class="title"></div>
+             <div class="text"></div>
+             <div class="text"></div>
+             <div class="buttons"></div>
         `;
         return skeleton;
     };
 
     document.addEventListener("DOMContentLoaded", () => {
-        // Показываем 3 скелетона
+        // Показываем 6 скелетона
         for (let i = 0; i < 6; i++) {
             container.appendChild(createSkeletonCard());
         }
