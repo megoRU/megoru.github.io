@@ -45,12 +45,12 @@
     const createSkeletonCard = () => {
         const skeleton = document.createElement("div");
         skeleton.className = "skeleton-card";
-        skeleton.innerHTML = `
+        skeleton.innerHTML = `<a>
              <div class="image"></div>
              <div class="title"></div>
-             <br>
              <div class="text"></div>
              <div class="buttons"></div>
+             </a>
         `;
         return skeleton;
     };
@@ -98,7 +98,7 @@
                         projectLink.appendChild(card);
                         container.appendChild(projectLink);
                     });
-                }, 350);
+                }, 300);
             })
             .catch(error => console.error("Ошибка загрузки проектов:", error));
     });

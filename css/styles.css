@@ -235,7 +235,7 @@ footer .footer-text .order {
 
 .skeleton-card .text {
     height: 16px;
-    margin-top: 5px;
+    margin-top: 23px;
     margin-left: 16px;
     width: 70%;
 }
@@ -276,6 +276,7 @@ footer .footer-text .order {
 
     .skeleton-card .buttons {
         margin-left: 10px;
+        margin-bottom: 15px;
     }
 
     .intro h1 {
@@ -284,7 +285,6 @@ footer .footer-text .order {
 
     .projects {
         grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
-        padding: 10px;
     }
 
     .project-card {
