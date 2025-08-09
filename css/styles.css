@@ -73,7 +73,6 @@ main h3 {
     object-fit: cover;
     display: block;
     border-radius: 20px 20px 0 0;
-    transition: transform 0.3s ease;
 }
 
 .projects a {
