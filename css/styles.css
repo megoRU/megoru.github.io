@@ -23,7 +23,7 @@ html[data-theme='dark'] {
     --link-color: #e1e1e1;
     --card-bg-color: #1e1e1e;
     --card-hover-bg-color: #2a2a2a;
-    --card-shadow: 2px 2px 10px rgba(255, 255, 255, 0.06);
+    --card-shadow: none;
     --project-link-color: #e1e1e1;
     --description-color: #a0a0a0;
     --footer-text-color: #e1e1e1;
@@ -91,14 +91,8 @@ html {
     transition: transform 0.2s ease-in-out;
 }
 
-html[data-theme='light'] .social-links a:hover img,
-html[data-theme='light'] .social-links a:hover svg {
+.social-links a:hover img, .social-links a:hover svg {
     transform: scale(1.1);
-}
-
-html[data-theme='dark'] .social-links a:hover img,
-html[data-theme='dark'] .social-links a:hover svg {
-    opacity: 0.8;
 }
 
 .github-icon, .pwa-icon {
