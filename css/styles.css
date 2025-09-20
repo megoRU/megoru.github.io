@@ -13,8 +13,6 @@
     --tooltip-bg-color: white;
     --tooltip-text-color: black;
     --tooltip-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    --icon-filter: brightness(1);
-    --icon-hover-filter: brightness(0.9);
 }
 
 html[data-theme='dark'] {
@@ -32,8 +30,6 @@ html[data-theme='dark'] {
     --tooltip-bg-color: #2c2c2c;
     --tooltip-text-color: #e1e1e1;
     --tooltip-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    --icon-filter: invert(1);
-    --icon-hover-filter: brightness(1.2);
 }
 
 
@@ -89,14 +85,12 @@ html {
     line-height: 0; /* Aligns icons better */
 }
 
-.social-links a img,
-.theme-switcher button img {
-    filter: var(--icon-filter);
-    transition: filter 0.1s ease-in-out;
+.social-links a img {
+    transition: transform 0.2s ease-in-out;
 }
 
 .social-links a:hover img {
-    filter: var(--icon-hover-filter);
+    transform: scale(1.1);
 }
 
 main {
@@ -170,7 +164,6 @@ a:visited {
 
 .tech-stack img {
     margin-right: 8px;
-    filter: var(--icon-filter);
 }
 
 footer {
@@ -266,6 +259,10 @@ footer .footer-text .order {
     display: none;
     width: 24px;
     height: 24px;
+}
+
+.theme-switcher svg {
+    stroke: var(--heading-color);
 }
 
 html[data-theme='light'] .theme-switcher .icon-sun {
