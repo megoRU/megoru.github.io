@@ -85,12 +85,16 @@ html {
     line-height: 0; /* Aligns icons better */
 }
 
-.social-links a img {
+.social-links a img, .social-links a svg {
     transition: transform 0.2s ease-in-out;
 }
 
-.social-links a:hover img {
+.social-links a:hover img, .social-links a:hover svg {
     transform: scale(1.1);
+}
+
+.github-icon {
+    color: var(--heading-color);
 }
 
 main {
