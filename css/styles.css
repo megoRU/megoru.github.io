@@ -1,9 +1,50 @@
+:root {
+    --bg-color: #fdf4f8;
+    --text-color: #1f1f1f;
+    --heading-color: rgb(33 33 33);
+    --link-color: rgb(33 33 33);
+    --card-bg-color: white;
+    --card-hover-bg-color: #f3f3f3;
+    --card-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    --project-link-color: black;
+    --description-color: #777;
+    --footer-text-color: #000000;
+    --telegram-link-color: rgb(10, 10, 10);
+    --tooltip-bg-color: white;
+    --tooltip-text-color: black;
+    --tooltip-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --icon-filter: brightness(1);
+    --icon-hover-filter: brightness(0.9);
+}
+
+html[data-theme='dark'] {
+    --bg-color: #121212;
+    --text-color: #e1e1e1;
+    --heading-color: #e1e1e1;
+    --link-color: #e1e1e1;
+    --card-bg-color: #1e1e1e;
+    --card-hover-bg-color: #2a2a2a;
+    --card-shadow: 2px 2px 15px rgba(255, 255, 255, 0.1);
+    --project-link-color: #e1e1e1;
+    --description-color: #a0a0a0;
+    --footer-text-color: #e1e1e1;
+    --telegram-link-color: #e1e1e1;
+    --tooltip-bg-color: #2c2c2c;
+    --tooltip-text-color: #e1e1e1;
+    --tooltip-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    --icon-filter: invert(1);
+    --icon-hover-filter: brightness(1.2);
+}
+
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #fdf4f8;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -14,33 +55,54 @@ html {
     justify-content: space-between;
     padding: 20px 20px 10px;
     align-items: center;
+    display: flex; /* Added for alignment of theme switcher */
 }
+
+/* This container will wrap the intro text */
+.intro-container {
+    flex-grow: 1; /* Allows this to take up available space */
+}
+
 
 .intro h1 {
     font-size: 36px;
-    color: rgb(33 33 33);
+    color: var(--heading-color);
+}
+
+.social-links-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between social icons and theme switcher */
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .social-links a {
     transition: filter 0.1s ease-in-out;
-    margin: 0 10px;
     font-size: 24px;
-    color: rgb(33 33 33);
+    color: var(--link-color);
     text-decoration: none;
+    line-height: 0; /* Aligns icons better */
 }
 
-.social-links a {
+.social-links a img,
+.theme-switcher button img {
+    filter: var(--icon-filter);
     transition: filter 0.1s ease-in-out;
 }
 
-.social-links a:hover {
-    filter: brightness(0.9); /* Затемняет иконку */
+.social-links a:hover img {
+    filter: var(--icon-hover-filter);
 }
 
 main {
-    padding: 0 20px; /* Меньшие отступы */
+    padding: 0 20px;
     width: 100%;
-    box-sizing: border-box; /* Включение отступов в расчет ширины */
+    box-sizing: border-box;
 }
 
 main h3 {
@@ -49,22 +111,23 @@ main h3 {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    max-width: 1200px; /* Максимальная ширина */
-    margin: 0 auto; /* Центрируем контейнер */
-    justify-content: center; /* Центрирование элементов по горизонтали */
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .project-card {
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-    background: white;
+    box-shadow: var(--card-shadow);
+    background: var(--card-bg-color);
     padding: 0;
     border-radius: 20px;
     overflow: visible;
     text-align: left;
     position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-image {
@@ -76,17 +139,17 @@ main h3 {
 }
 
 .projects a {
-    color: black;
+    color: var(--project-link-color);
     text-decoration: none;
 }
 
 a:visited {
-    text-decoration: none; /* Убирает подчеркивание */
-    color: inherit; /* Сохраняет цвет текста ссылки */
+    text-decoration: none;
+    color: inherit;
 }
 
 .project-card:hover {
-    background-color: #f3f3f3; /* Светло-серый */
+    background-color: var(--card-hover-bg-color);
 }
 
 .project-info {
@@ -94,7 +157,7 @@ a:visited {
 }
 
 .description {
-    color: #777;
+    color: var(--description-color);
 }
 
 .tech-stack {
@@ -107,31 +170,32 @@ a:visited {
 
 .tech-stack img {
     margin-right: 8px;
+    filter: var(--icon-filter);
 }
 
 footer {
     padding: 20px;
-    color: #000000;
-    justify-content: flex-start; /* Выравнивание элементов по левому краю */
-    align-items: center; /* Вертикальное выравнивание */
-    max-width: 1200px; /* Максимальная ширина футера */
-    margin: 0 auto; /* Центрирование футера на странице */
+    color: var(--footer-text-color);
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .telegram {
     text-decoration: none;
-    color: rgb(10, 10, 10);
+    color: var(--telegram-link-color);
 }
 
 footer .footer-text {
-    margin-right: 20px; /* Отступ между текстом и кнопками */
+    margin-right: 20px;
     margin-bottom: 20px;
 }
 
 footer .footer-text .order {
-    font-size: 22px; /* Увеличиваем размер шрифта */
-    font-weight: bold; /* Делаем текст жирным */
-    margin-bottom: 10px; /* Отступ снизу */
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .footer-text p {
@@ -166,16 +230,16 @@ footer .footer-text .order {
     bottom: 120%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: white;
-    color: black;
-    padding: 15px 20px; /* Увеличиваем отступы */
+    background-color: var(--tooltip-bg-color);
+    color: var(--tooltip-text-color);
+    padding: 15px 20px;
     border-radius: 8px;
-    font-size: 16px; /* Увеличиваем шрифт */
+    font-size: 16px;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+    box-shadow: var(--tooltip-shadow);
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -184,44 +248,58 @@ footer .footer-text .order {
     text-align: left;
 }
 
-.tech-icon-wrapper:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-}
-
 .tooltip p {
     padding-top: 5px;
 }
 
-/* Медиазапросы для мобильных устройств */
+/* Theme Switcher Styles */
+.theme-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 0; /* Better vertical alignment */
+}
+
+.theme-switcher .icon-sun,
+.theme-switcher .icon-moon {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+
+html[data-theme='light'] .theme-switcher .icon-sun {
+    display: block;
+}
+
+html[data-theme='dark'] .theme-switcher .icon-moon {
+    display: block;
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 @media (max-width: 768px) {
-    main {
-        padding: 0 10px;
-    }
-
-    #projects-container {
-        gap: 10px;
-    }
-
-    .title h4 {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
     .intro h1 {
-        font-size: 25px;
+        font-size: 28px;
     }
 
     .projects {
-        grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+        grid-template-columns: 1fr;
     }
 
     .project-card {
-        margin: 10px 0; /* Добавляем отступы между карточками */
+        margin: 10px 0;
     }
 
     .project-image {
-        height: 150px; /* Уменьшаем высоту изображения на мобильных устройствах */
+        height: 180px;
     }
 
     .project-info {
@@ -229,24 +307,39 @@ footer .footer-text .order {
     }
 
     .tech-stack {
-        font-size: 18px; /* Уменьшаем размер шрифта для мобильных */
+        font-size: 18px;
     }
 
-    .tooltip {
-        visibility: hidden;
-    }
-
+    .tooltip,
     .tech-icon-wrapper:hover .tooltip {
         visibility: hidden;
     }
 
     a {
-        color: black;
+        color: var(--project-link-color);
         text-decoration: none;
     }
 
     a:visited {
         text-decoration: none;
-        color: black;
+        color: inherit;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    .social-links-container {
+        order: -1; /* Move switcher and social links to the top */
+        width: 100%;
+        justify-content: flex-end;
     }
 }
