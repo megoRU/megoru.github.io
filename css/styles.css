@@ -13,6 +13,7 @@
     --tooltip-bg-color: white;
     --tooltip-text-color: black;
     --tooltip-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --switcher-hover-bg: rgba(0, 0, 0, 0.08);
 }
 
 html[data-theme='dark'] {
@@ -30,6 +31,7 @@ html[data-theme='dark'] {
     --tooltip-bg-color: #2c2c2c;
     --tooltip-text-color: #e1e1e1;
     --tooltip-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    --switcher-hover-bg: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -89,8 +91,14 @@ html {
     transition: transform 0.2s ease-in-out;
 }
 
-.social-links a:hover img, .social-links a:hover svg {
+html[data-theme='light'] .social-links a:hover img,
+html[data-theme='light'] .social-links a:hover svg {
     transform: scale(1.1);
+}
+
+html[data-theme='dark'] .social-links a:hover img,
+html[data-theme='dark'] .social-links a:hover svg {
+    opacity: 0.8;
 }
 
 .github-icon, .pwa-icon {
@@ -254,15 +262,27 @@ footer .footer-text .order {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
-    line-height: 0; /* Better vertical alignment */
+    padding: 8px;
+    border-radius: 50%;
+    line-height: 0;
+    transition: background-color 0.2s ease-in-out;
+    position: relative; /* Contain the icons */
+    width: 40px;  /* Explicit size */
+    height: 40px; /* Explicit size */
+}
+
+.theme-switcher button:hover {
+    background-color: var(--switcher-hover-bg);
 }
 
 .theme-switcher .icon-sun,
 .theme-switcher .icon-moon {
-    display: none;
+    display: block;
     width: 24px;
     height: 24px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    position: absolute; /* Allows them to overlap */
 }
 
 .theme-switcher svg {
@@ -270,11 +290,11 @@ footer .footer-text .order {
 }
 
 html[data-theme='light'] .theme-switcher .icon-sun {
-    display: block;
+    transform: scale(1);
 }
 
 html[data-theme='dark'] .theme-switcher .icon-moon {
-    display: block;
+    transform: scale(1);
 }
 
 
