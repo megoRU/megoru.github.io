@@ -283,6 +283,8 @@ footer .footer-text .order {
     transform: scale(0);
     transition: transform 0.3s ease;
     position: absolute; /* Allows them to overlap */
+    top: 8px;
+    left: 8px;
 }
 
 .theme-switcher svg {
