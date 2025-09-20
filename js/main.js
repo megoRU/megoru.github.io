@@ -15,15 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(newTheme);
     });
 
-    // Initial theme setup
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme) {
-        applyTheme(savedTheme);
-    } else if (prefersDark) {
-        applyTheme('dark');
-    } else {
-        applyTheme('light'); // Default theme
-    }
+    // Initial theme setup is now in index.html
 });
