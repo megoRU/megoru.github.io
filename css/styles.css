@@ -22,7 +22,7 @@ html[data-theme='dark'] {
     --link-color: #e1e1e1;
     --card-bg-color: #1e1e1e;
     --card-hover-bg-color: #2a2a2a;
-    --card-shadow: 2px 2px 15px rgba(255, 255, 255, 0.1);
+    --card-shadow: 2px 2px 10px rgba(255, 255, 255, 0.06);
     --project-link-color: #e1e1e1;
     --description-color: #a0a0a0;
     --footer-text-color: #e1e1e1;
@@ -93,7 +93,7 @@ html {
     transform: scale(1.1);
 }
 
-.github-icon {
+.github-icon, .pwa-icon {
     color: var(--heading-color);
 }
 
