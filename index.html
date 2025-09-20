@@ -12,23 +12,34 @@
 <body>
 <header>
     <div class="header-content">
-        <div class="intro">
-            <h1>Привет, я mego!</h1>
-            <p class="description">Java Backend Developer</p>
+        <div class="intro-container">
+            <div class="intro">
+                <h1>Привет, я mego!</h1>
+                <p class="description">Java Backend Developer</p>
+            </div>
+        </div>
+        <div class="social-links-container">
             <div class="social-links">
-                <a href="https://t.me/mego_RU" target="_blank"><img src='assets/icons/telegram.svg' class='tech-icon'
-                                                                    width='30' height='30' alt=''/></a>
-                <a href="https://discord.com/users/250699265389625347" target="_blank"><img
-                        src='assets/icons/discord.svg' class='tech-icon' width='30' height='30' alt=''/></a>
-                <a href="https://github.com/megoRU" target="_blank"><img src='assets/icons/github.svg' class='tech-icon'
-                                                                         width='30' height='30' alt=''/></a>
+                <a href="https://t.me/mego_RU" target="_blank"><img src='assets/icons/telegram.svg' class='tech-icon' width='30' height='30' alt='Telegram'/></a>
+                <a href="https://discord.com/users/250699265389625347" target="_blank"><img src='assets/icons/discord.svg' class='tech-icon' width='30' height='30' alt='Discord'/></a>
+                <a href="https://github.com/megoRU" target="_blank" class="github-link">
+                    <svg class="tech-icon github-icon" viewBox="0 0 16 16" width="28" height="28" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-toggle" title="Toggle theme">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12"x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
             </div>
         </div>
     </div>
 </header>
-<h3>Мои последние работы</h3>
 
 <main>
+    <h3>Мои последние работы</h3>
     <div id="projects-container" class="projects">
         <a href="https://t.me/YouTubeTimecodeBot" target="_blank">
             <div class="project-card">
@@ -41,7 +52,7 @@
                                                             width="25" height="25" alt="">
                             <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
                                 <div><strong>Spring Boot</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Фреймворк для создания<br>Java
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
                                         приложений</p></div>
                             </div>
                         </div>
@@ -49,7 +60,7 @@
                                                             height="30" alt="">
                             <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
                                 <div><strong>MariaDB</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Открытая СУБД, форк MySQL</p>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +68,7 @@
                                                             height="26" alt="">
                             <div class="tooltip"><img src="assets/icons/chatgpt.svg" width="26" height="26" alt="">
                                 <div><strong>ChatGPT</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Искусственный интеллект<br>для
+                                    <p style="margin: 0; font-size: 16px;">Искусственный интеллект<br>для
                                         общения</p></div>
                             </div>
                         </div>
@@ -78,18 +89,31 @@
                             <div class="tooltip"><img src="assets/icons/react.svg" width="30" height="30" alt="">
                                 <div>
                                     <strong>ReactJS</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">
+                                    <p style="margin: 0; font-size: 16px;">
                                         Библиотека для создания<br>интерфейсов на JavaScript
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="tech-icon-wrapper"><img src="assets/icons/pwa.svg" class="tech-icon" width="30"
-                                                            height="30" alt="">
-                            <div class="tooltip"><img src="assets/icons/pwa.svg" width="30" height="30" alt="">
+                        <div class="tech-icon-wrapper">
+                            <svg class="tech-icon pwa-icon" width="30" height="30" viewBox="0 -30 512 250" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                <g>
+                                    <polygon points="376.818362 158.243566 391.609181 120.840549 434.316067 120.840549 414.048526 64.1021885 439.396722 3.2018623e-05 512.000001 192.769205 458.457706 192.769205 446.051149 158.243566"></polygon>
+                                    <polygon points="331.139673 192.76973 408.862952 0.000304174426 357.335083 0.000560323934 304.16787 124.572484 266.360657 0.00081647082 226.753837 0.00081647082 186.158952 124.572484 157.530493 67.8076311 131.622821 147.624549 157.926821 192.76973 208.636591 192.76973 245.320394 81.0556311 280.296394 192.76973"></polygon>
+                                    <path d="M48.9117387,126.594779 L80.6502305,126.594779 C90.2643944,126.594779 98.8254436,125.52173 106.333378,123.375631 L114.541378,98.0882869 L137.481444,27.4139262 C135.733509,24.6434344 133.737968,22.0239459 131.494821,19.5558016 C119.71646,6.51845082 102.483673,0 79.7959354,0 L0,0 L0,192.769205 L48.9117387,192.769205 L48.9117387,126.594779 Z M90.9224928,44.3484836 C95.5231485,48.9787787 97.8232141,55.1749754 97.8232141,62.9375984 C97.8232141,70.7597623 95.8001321,76.9635656 91.7542305,81.5490082 C87.3188207,86.6440902 79.1517387,89.1915 67.2535092,89.1915 L48.9117387,89.1915 L48.9117387,37.4026475 L67.3883289,37.4026475 C78.477378,37.4026475 86.3220994,39.7179262 90.9224928,44.3484836 Z"></path>
+                                </g>
+                            </svg>
+                            <div class="tooltip">
+                            <svg class="tech-icon pwa-icon" width="30" height="30" viewBox="0 -30 512 250" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                <g>
+                                    <polygon points="376.818362 158.243566 391.609181 120.840549 434.316067 120.840549 414.048526 64.1021885 439.396722 3.2018623e-05 512.000001 192.769205 458.457706 192.769205 446.051149 158.243566"></polygon>
+                                    <polygon points="331.139673 192.76973 408.862952 0.000304174426 357.335083 0.000560323934 304.16787 124.572484 266.360657 0.00081647082 226.753837 0.00081647082 186.158952 124.572484 157.530493 67.8076311 131.622821 147.624549 157.926821 192.76973 208.636591 192.76973 245.320394 81.0556311 280.296394 192.76973"></polygon>
+                                    <path d="M48.9117387,126.594779 L80.6502305,126.594779 C90.2643944,126.594779 98.8254436,125.52173 106.333378,123.375631 L114.541378,98.0882869 L137.481444,27.4139262 C135.733509,24.6434344 133.737968,22.0239459 131.494821,19.5558016 C119.71646,6.51845082 102.483673,0 79.7959354,0 L0,0 L0,192.769205 L48.9117387,192.769205 L48.9117387,126.594779 Z M90.9224928,44.3484836 C95.5231485,48.9787787 97.8232141,55.1749754 97.8232141,62.9375984 C97.8232141,70.7597623 95.8001321,76.9635656 91.7542305,81.5490082 C87.3188207,86.6440902 79.1517387,89.1915 67.2535092,89.1915 L48.9117387,89.1915 L48.9117387,37.4026475 L67.3883289,37.4026475 C78.477378,37.4026475 86.3220994,39.7179262 90.9224928,44.3484836 Z"></path>
+                                </g>
+                            </svg>
                                 <div>
                                     <strong>Progressive Web App</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">
+                                    <p style="margin: 0; font-size: 16px;">
                                         Веб-приложение работающее<br>офлайн, как нативное.
                                     </p>
                                 </div>
@@ -111,7 +135,7 @@
                                                             width="25" height="25" alt="">
                             <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
                                 <div><strong>Spring Boot</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Фреймворк для создания<br>Java
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
                                         приложений</p></div>
                             </div>
                         </div>
@@ -119,7 +143,7 @@
                                                             height="30" alt="">
                             <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
                                 <div><strong>MariaDB</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Открытая СУБД, форк MySQL</p>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +151,7 @@
                                                             height="26" alt="">
                             <div class="tooltip"><img src="assets/icons/chatgpt.svg" width="26" height="26" alt="">
                                 <div><strong>ChatGPT</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Искусственный интеллект<br>для
+                                    <p style="margin: 0; font-size: 16px;">Искусственный интеллект<br>для
                                         общения</p></div>
                             </div>
                         </div>
@@ -147,7 +171,7 @@
                                                             width="25" height="25" alt="">
                             <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
                                 <div><strong>Spring Boot</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Фреймворк для создания<br>Java
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
                                         приложений</p></div>
                             </div>
                         </div>
@@ -155,7 +179,7 @@
                                                             height="30" alt="">
                             <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
                                 <div><strong>MariaDB</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Открытая СУБД, форк MySQL</p>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +187,7 @@
                                                             height="26" alt="">
                             <div class="tooltip"><img src="assets/icons/chatgpt.svg" width="26" height="26" alt="">
                                 <div><strong>ChatGPT</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Искусственный интеллект<br>для
+                                    <p style="margin: 0; font-size: 16px;">Искусственный интеллект<br>для
                                         общения</p></div>
                             </div>
                         </div>
@@ -183,7 +207,7 @@
                                                             width="25" height="25" alt="">
                             <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
                                 <div><strong>Spring Boot</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Фреймворк для создания<br>Java
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
                                         приложений</p></div>
                             </div>
                         </div>
@@ -191,7 +215,7 @@
                                                             height="30" alt="">
                             <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
                                 <div><strong>MariaDB</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Открытая СУБД, форк MySQL</p>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
                                 </div>
                             </div>
                         </div>
@@ -211,7 +235,7 @@
                                                             width="25" height="25" alt="">
                             <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
                                 <div><strong>Spring Boot</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Фреймворк для создания<br>Java
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
                                         приложений</p></div>
                             </div>
                         </div>
@@ -219,7 +243,7 @@
                                                             height="30" alt="">
                             <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
                                 <div><strong>MariaDB</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Открытая СУБД, форк MySQL</p>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
                                 </div>
                             </div>
                         </div>
@@ -239,7 +263,7 @@
                                                             width="25" height="25" alt="">
                             <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
                                 <div><strong>Spring Boot</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Фреймворк для создания<br>Java
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
                                         приложений</p></div>
                             </div>
                         </div>
@@ -247,7 +271,7 @@
                                                             height="30" alt="">
                             <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
                                 <div><strong>MariaDB</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Открытая СУБД, форк MySQL</p>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +279,7 @@
                                                             height="26" alt="">
                             <div class="tooltip"><img src="assets/icons/chatgpt.svg" width="26" height="26" alt="">
                                 <div><strong>ChatGPT</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Искусственный интеллект<br>для
+                                    <p style="margin: 0; font-size: 16px;">Искусственный интеллект<br>для
                                         общения</p></div>
                             </div>
                         </div>
@@ -275,7 +299,7 @@
                                                             width="25" height="25" alt="">
                             <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
                                 <div><strong>Spring Boot</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Фреймворк для создания<br>Java
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
                                         приложений</p></div>
                             </div>
                         </div>
@@ -283,7 +307,7 @@
                                                             height="30" alt="">
                             <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
                                 <div><strong>MariaDB</strong>
-                                    <p style="margin: 0; font-size: 16px; color: #555;">Открытая СУБД, форк MySQL</p>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
                                 </div>
                             </div>
                         </div>
@@ -301,5 +325,6 @@
     </div>
 </footer>
 
+<script src="js/main.js" defer></script>
 </body>
 </html>
