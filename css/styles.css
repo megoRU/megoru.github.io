@@ -308,6 +308,12 @@ footer .footer-text .order {
 
 .theme-switcher svg {
     stroke: var(--heading-color);
+    fill: none; /* Ensure only stroke is used for sun/moon */
+}
+
+.theme-switcher .icon-auto {
+    fill: var(--heading-color); /* Use fill for the auto icon */
+    stroke: none; /* Do not use stroke for the auto icon */
 }
 
 html[data-theme='light'] .theme-switcher .icon-sun {
