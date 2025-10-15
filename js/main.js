@@ -2,18 +2,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
 
-    // Function to set the theme
     const applyTheme = (theme) => {
-        htmlElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+        if (theme === 'auto') {
+            htmlElement.setAttribute('data-theme', 'auto');
+            localStorage.setItem('theme', 'auto');
+        } else {
+            htmlElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
     };
 
-    // Event listener for the toggle button
     themeToggle.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        const currentTheme = localStorage.getItem('theme') || 'auto';
+        let newTheme;
+        if (currentTheme === 'auto') {
+            newTheme = 'light';
+        } else if (currentTheme === 'light') {
+            newTheme = 'dark';
+        } else {
+            newTheme = 'auto';
+        }
         applyTheme(newTheme);
     });
 
-    // Initial theme setup is now in index.html
+    // Set initial theme based on saved preference or system setting
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        applyTheme('auto');
+    }
 });
