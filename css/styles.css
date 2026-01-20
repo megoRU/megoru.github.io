@@ -36,6 +36,10 @@ html[data-theme='dark'] {
     --switcher-hover-bg: rgba(255, 255, 255, 0.1);
 }
 
+html[data-theme-ready] body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-color);
@@ -43,7 +47,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: none;
 }
 
 header {
@@ -121,6 +125,7 @@ main h3 {
 }
 
 .project-card {
+    will-change: background-color;
     box-shadow: var(--card-shadow);
     background: var(--card-bg-color);
     padding: 0;
@@ -205,31 +210,27 @@ footer .footer-text .order {
 }
 
 .tech-icon-wrapper {
-    display: flex;
+    position: relative;
+    display: inline-flex;
     gap: 10px;
-}
-
-.tech-icon {
-    position: relative;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-.tech-icon-wrapper {
-    position: relative;
-    display: inline-block;
 }
 
 .tech-icon-wrapper:hover .tooltip {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+img, svg {
+    will-change: transform;
 }
 
 .tooltip {
     position: absolute;
-    bottom: 120%;
+    bottom: calc(100% + 12px);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(4px);
+    pointer-events: none;
     background-color: var(--tooltip-bg-color);
     color: var(--tooltip-text-color);
     padding: 15px 20px;
@@ -238,10 +239,10 @@ footer .footer-text .order {
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     box-shadow: var(--tooltip-shadow);
     border: var(--tooltip-border);
-    z-index: 9999;
+    z-index: 100;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -340,9 +341,8 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
         font-size: 18px;
     }
 
-    .tooltip,
-    .tech-icon-wrapper:hover .tooltip {
-        visibility: hidden;
+    .tooltip {
+        display: none;
     }
 
     a {

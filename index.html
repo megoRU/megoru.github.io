@@ -14,9 +14,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
 
     <script>
-        const theme = localStorage.getItem('theme') ?? 'auto';
-        document.documentElement.dataset.theme = theme;
-        requestAnimationFrame(() => document.documentElement.classList.remove('preload'));
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'auto';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
     </script>
 
     <link rel="stylesheet" href="css/styles.css">
@@ -59,34 +60,23 @@
     <h3>Мои последние работы</h3>
     <div id="projects-container" class="projects">
 
-        <!-- Guard -->
-        <a href="https://doh.megoru.ru" target="_blank" rel="noopener noreferrer">
+        <a href="https://doh.megoru.ru" target="_blank">
             <div class="project-card">
-                <img src="assets/images/DNS.jpg" alt="Guard DNS over HTTPS"
-                     class="project-image"
-                     width="400" height="250"
-                     loading="lazy" decoding="async">
+                <img src="assets/images/DNS.jpg" alt="YouTube | Таймкоды" class="project-image">
                 <div class="project-info">
                     <h4>Guard</h4>
                     <p class="description">Быстрый и безопасный DNS over HTTPS</p>
                     <div class="tech-stack">
-                        <div class="tech-icon-wrapper">
-                            <img src="assets/icons/nginx.svg" class="tech-icon"
-                                 width="25" height="25" loading="lazy" decoding="async" alt="">
-                            <div class="tooltip">
-                                <img src="assets/icons/nginx.svg" width="25" height="25" alt="">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/nginx.svg" class="tech-icon" width="25" height="25" alt="">
+                            <div class="tooltip"><img src="assets/icons/nginx.svg" width="25" height="25" alt="">
                                 <div><strong>Nginx</strong>
-                                    <p style="margin:0;font-size:16px;">Высокопроизводительный<br>Веб-сервер</p>
-                                </div>
+                                    <p style="margin: 0; font-size: 16px;">Высокопроизводительный<br>Веб-сервер</p></div>
                             </div>
                         </div>
-                        <div class="tech-icon-wrapper">
-                            <img src="assets/icons/dns.svg" class="tech-icon"
-                                 width="30" height="30" loading="lazy" decoding="async" alt="">
-                            <div class="tooltip">
-                                <img src="assets/icons/dns.svg" width="30" height="30" alt="">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/dns.svg" class="tech-icon" width="30" height="30" alt="">
+                            <div class="tooltip"><img src="assets/icons/dns.svg" width="30" height="30" alt="">
                                 <div><strong>Unbound</strong>
-                                    <p style="margin:0;font-size:16px;">DNS-резолвер (DNS-сервер)</p>
+                                    <p style="margin: 0; font-size: 16px;">DNS-резолвер (DNS-сервер)</p>
                                 </div>
                             </div>
                         </div>
@@ -95,45 +85,35 @@
             </div>
         </a>
 
-        <!-- YouTube Timecodes -->
-        <a href="https://t.me/YouTubeTimecodeBot" target="_blank" rel="noopener noreferrer">
+        <a href="https://t.me/YouTubeTimecodeBot" target="_blank">
             <div class="project-card">
-                <img src="assets/images/youtubetimecode.png" alt="YouTube Таймкоды"
-                     class="project-image"
-                     width="400" height="250"
-                     loading="lazy" decoding="async">
+                <img src="assets/images/youtubetimecode.png" alt="YouTube | Таймкоды" class="project-image">
                 <div class="project-info">
                     <h4>YouTube | Таймкоды</h4>
                     <p class="description">Генератор таймкодов YouTube</p>
                     <div class="tech-stack">
-                        <div class="tech-icon-wrapper">
-                            <img src="assets/icons/spring boot.svg" class="tech-icon"
-                                 width="25" height="25" loading="lazy" decoding="async" alt="">
-                            <div class="tooltip">
-                                <img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/spring boot.svg" class="tech-icon"
+                                                            width="25" height="25" alt="">
+                            <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
                                 <div><strong>Spring Boot</strong>
-                                    <p style="margin:0;font-size:16px;">Фреймворк для создания<br>Java приложений</p>
-                                </div>
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
+                                        приложений</p></div>
                             </div>
                         </div>
-                        <div class="tech-icon-wrapper">
-                            <img src="assets/icons/mariadb.svg" class="tech-icon"
-                                 width="30" height="30" loading="lazy" decoding="async" alt="">
-                            <div class="tooltip">
-                                <img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/mariadb.svg" class="tech-icon" width="30"
+                                                            height="30" alt="">
+                            <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
                                 <div><strong>MariaDB</strong>
-                                    <p style="margin:0;font-size:16px;">Открытая СУБД, форк MySQL</p>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="tech-icon-wrapper">
-                            <img src="assets/icons/chatgpt.svg" class="tech-icon"
-                                 width="26" height="26" loading="lazy" decoding="async" alt="">
-                            <div class="tooltip">
-                                <img src="assets/icons/chatgpt.svg" width="26" height="26" alt="">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/chatgpt.svg" class="tech-icon" width="26"
+                                                            height="26" alt="">
+                            <div class="tooltip"><img src="assets/icons/chatgpt.svg" width="26" height="26" alt="">
                                 <div><strong>ChatGPT</strong>
-                                    <p style="margin:0;font-size:16px;">Искусственный интеллект<br>для общения</p>
-                                </div>
+                                    <p style="margin: 0; font-size: 16px;">Искусственный интеллект<br>для
+                                        общения</p></div>
                             </div>
                         </div>
                     </div>
@@ -141,129 +121,246 @@
             </div>
         </a>
 
-        <!-- DiskonCard -->
-        <a href="https://diskoncard.megoru.ru" target="_blank" rel="noopener noreferrer">
+        <a href="https://diskoncard.megoru.ru" target="_blank">
             <div class="project-card">
-                <img src="assets/images/diskoncard.png" alt="DiskonCard"
-                     class="project-image"
-                     width="400" height="250"
-                     loading="lazy" decoding="async">
+                <img src="assets/images/diskoncard.png" alt="DiskonCard" class="project-image">
                 <div class="project-info">
                     <h4>DiskonCard</h4>
                     <p class="description">Сервис для удобного хранения бонусных карт</p>
                     <div class="tech-stack">
-                        <div class="tech-icon-wrapper">
-                            <img src="assets/icons/react.svg" class="tech-icon"
-                                 width="28" height="28" loading="lazy" decoding="async" alt="">
-                            <div class="tooltip">
-                                <img src="assets/icons/react.svg" width="30" height="30" alt="">
-                                <div><strong>ReactJS</strong>
-                                    <p style="margin:0;font-size:16px;">Библиотека для создания<br>интерфейсов</p>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/react.svg" class="tech-icon" width="28"
+                                                            height="28" alt="">
+                            <div class="tooltip"><img src="assets/icons/react.svg" width="30" height="30" alt="">
+                                <div>
+                                    <strong>ReactJS</strong>
+                                    <p style="margin: 0; font-size: 16px;">
+                                        Библиотека для создания<br>интерфейсов на JavaScript
+                                    </p>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- PWA SVG без изменений -->
-                        <!-- Оставлен полностью как у тебя -->
-                        <!-- … -->
-
+                        <div class="tech-icon-wrapper">
+                            <svg class="tech-icon pwa-icon" width="30" height="30" viewBox="0 -30 512 250" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                <g>
+                                    <polygon points="376.818362 158.243566 391.609181 120.840549 434.316067 120.840549 414.048526 64.1021885 439.396722 3.2018623e-05 512.000001 192.769205 458.457706 192.769205 446.051149 158.243566"></polygon>
+                                    <polygon points="331.139673 192.76973 408.862952 0.000304174426 357.335083 0.000560323934 304.16787 124.572484 266.360657 0.00081647082 226.753837 0.00081647082 186.158952 124.572484 157.530493 67.8076311 131.622821 147.624549 157.926821 192.76973 208.636591 192.76973 245.320394 81.0556311 280.296394 192.76973"></polygon>
+                                    <path d="M48.9117387,126.594779 L80.6502305,126.594779 C90.2643944,126.594779 98.8254436,125.52173 106.333378,123.375631 L114.541378,98.0882869 L137.481444,27.4139262 C135.733509,24.6434344 133.737968,22.0239459 131.494821,19.5558016 C119.71646,6.51845082 102.483673,0 79.7959354,0 L0,0 L0,192.769205 L48.9117387,192.769205 L48.9117387,126.594779 Z M90.9224928,44.3484836 C95.5231485,48.9787787 97.8232141,55.1749754 97.8232141,62.9375984 C97.8232141,70.7597623 95.8001321,76.9635656 91.7542305,81.5490082 C87.3188207,86.6440902 79.1517387,89.1915 67.2535092,89.1915 L48.9117387,89.1915 L48.9117387,37.4026475 L67.3883289,37.4026475 C78.477378,37.4026475 86.3220994,39.7179262 90.9224928,44.3484836 Z"></path>
+                                </g>
+                            </svg>
+                            <div class="tooltip">
+                                <svg class="tech-icon pwa-icon" width="30" height="30" viewBox="0 -30 512 250" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                    <g>
+                                        <polygon points="376.818362 158.243566 391.609181 120.840549 434.316067 120.840549 414.048526 64.1021885 439.396722 3.2018623e-05 512.000001 192.769205 458.457706 192.769205 446.051149 158.243566"></polygon>
+                                        <polygon points="331.139673 192.76973 408.862952 0.000304174426 357.335083 0.000560323934 304.16787 124.572484 266.360657 0.00081647082 226.753837 0.00081647082 186.158952 124.572484 157.530493 67.8076311 131.622821 147.624549 157.926821 192.76973 208.636591 192.76973 245.320394 81.0556311 280.296394 192.76973"></polygon>
+                                        <path d="M48.9117387,126.594779 L80.6502305,126.594779 C90.2643944,126.594779 98.8254436,125.52173 106.333378,123.375631 L114.541378,98.0882869 L137.481444,27.4139262 C135.733509,24.6434344 133.737968,22.0239459 131.494821,19.5558016 C119.71646,6.51845082 102.483673,0 79.7959354,0 L0,0 L0,192.769205 L48.9117387,192.769205 L48.9117387,126.594779 Z M90.9224928,44.3484836 C95.5231485,48.9787787 97.8232141,55.1749754 97.8232141,62.9375984 C97.8232141,70.7597623 95.8001321,76.9635656 91.7542305,81.5490082 C87.3188207,86.6440902 79.1517387,89.1915 67.2535092,89.1915 L48.9117387,89.1915 L48.9117387,37.4026475 L67.3883289,37.4026475 C78.477378,37.4026475 86.3220994,39.7179262 90.9224928,44.3484836 Z"></path>
+                                    </g>
+                                </svg>
+                                <div>
+                                    <strong>Progressive Web App</strong>
+                                    <p style="margin: 0; font-size: 16px;">
+                                        Веб-приложение работающее<br>офлайн, как нативное.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </a>
 
-        <!-- VPN -->
         <a href="https://megoru.ru">
             <div class="project-card">
-                <img src="assets/images/vpn.png" alt="VPN"
-                     class="project-image"
-                     width="400" height="250"
-                     loading="lazy" decoding="async">
+                <img src="assets/images/vpn.png" alt="Дешёвый VPN" class="project-image">
                 <div class="project-info">
                     <h4>Какой-то проект с VPN</h4>
                     <p class="description">Телеграм бот</p>
-                    <!-- tech-stack без изменений -->
+                    <div class="tech-stack">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/spring boot.svg" class="tech-icon"
+                                                            width="25" height="25" alt="">
+                            <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
+                                <div><strong>Spring Boot</strong>
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
+                                        приложений</p></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/mariadb.svg" class="tech-icon" width="30"
+                                                            height="30" alt="">
+                            <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
+                                <div><strong>MariaDB</strong>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/chatgpt.svg" class="tech-icon" width="26"
+                                                            height="26" alt="">
+                            <div class="tooltip"><img src="assets/icons/chatgpt.svg" width="26" height="26" alt="">
+                                <div><strong>ChatGPT</strong>
+                                    <p style="margin: 0; font-size: 16px;">Искусственный интеллект<br>для
+                                        общения</p></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </a>
 
-        <!-- ScanFit -->
-        <a href="https://t.me/scan_fit_bot" target="_blank" rel="noopener noreferrer">
+        <a href="https://t.me/scan_fit_bot" target="_blank">
             <div class="project-card">
-                <img src="assets/images/scanFit.jpg" alt="ScanFit"
-                     class="project-image"
-                     width="400" height="250"
-                     loading="lazy" decoding="async">
+                <img src="assets/images/scanFit.jpg" alt="ScanFit" class="project-image">
                 <div class="project-info">
                     <h4>ScanFit</h4>
                     <p class="description">Telegram бот для расчета КБЖУ</p>
+                    <div class="tech-stack">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/spring boot.svg" class="tech-icon"
+                                                            width="25" height="25" alt="">
+                            <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
+                                <div><strong>Spring Boot</strong>
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
+                                        приложений</p></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/mariadb.svg" class="tech-icon" width="30"
+                                                            height="30" alt="">
+                            <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
+                                <div><strong>MariaDB</strong>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/chatgpt.svg" class="tech-icon" width="26"
+                                                            height="26" alt="">
+                            <div class="tooltip"><img src="assets/icons/chatgpt.svg" width="26" height="26" alt="">
+                                <div><strong>ChatGPT</strong>
+                                    <p style="margin: 0; font-size: 16px;">Искусственный интеллект<br>для
+                                        общения</p></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </a>
 
-        <!-- RConf -->
-        <a href="https://rconf.ru" target="_blank" rel="noopener noreferrer">
+        <a href="https://rconf.ru" target="_blank">
             <div class="project-card">
-                <img src="assets/images/rconf.png" alt="RConf"
-                     class="project-image"
-                     width="400" height="250"
-                     loading="lazy" decoding="async">
+                <img src="assets/images/rconf.png" alt="Rconf" class="project-image">
                 <div class="project-info">
                     <h4>RConf</h4>
                     <p class="description">Реализация поддержки в Telegram</p>
+                    <div class="tech-stack">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/spring boot.svg" class="tech-icon"
+                                                            width="25" height="25" alt="">
+                            <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
+                                <div><strong>Spring Boot</strong>
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
+                                        приложений</p></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/mariadb.svg" class="tech-icon" width="30"
+                                                            height="30" alt="">
+                            <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
+                                <div><strong>MariaDB</strong>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </a>
 
-        <!-- Giveaway -->
-        <a href="https://discord.com/oauth2/authorize?client_id=808277484524011531"
-           target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.com/oauth2/authorize?client_id=808277484524011531" target="_blank">
             <div class="project-card">
-                <img src="assets/images/giveaway.png" alt="Giveaway"
-                     class="project-image"
-                     width="400" height="250"
-                     loading="lazy" decoding="async">
+                <img src="assets/images/giveaway.png" alt="Giveaway" class="project-image">
                 <div class="project-info">
                     <h4>Giveaway</h4>
                     <p class="description">Discord бот для определения победителей.</p>
+                    <div class="tech-stack">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/spring boot.svg" class="tech-icon"
+                                                            width="25" height="25" alt="">
+                            <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
+                                <div><strong>Spring Boot</strong>
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
+                                        приложений</p></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/mariadb.svg" class="tech-icon" width="30"
+                                                            height="30" alt="">
+                            <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
+                                <div><strong>MariaDB</strong>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </a>
 
-        <!-- Hangman -->
-        <a href="https://discord.com/oauth2/authorize?client_id=845974873682608129"
-           target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.com/oauth2/authorize?client_id=845974873682608129" target="_blank">
             <div class="project-card">
-                <img src="assets/images/hangman.png" alt="Hangman"
-                     class="project-image"
-                     width="400" height="250"
-                     loading="lazy" decoding="async">
+                <img src="assets/images/hangman.png" alt="Hangman" class="project-image">
                 <div class="project-info">
                     <h4>Hangman</h4>
                     <p class="description">Discord бот для игры в Виселицу.</p>
+                    <div class="tech-stack">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/spring boot.svg" class="tech-icon"
+                                                            width="25" height="25" alt="">
+                            <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
+                                <div><strong>Spring Boot</strong>
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
+                                        приложений</p></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/mariadb.svg" class="tech-icon" width="30"
+                                                            height="30" alt="">
+                            <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
+                                <div><strong>MariaDB</strong>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/chatgpt.svg" class="tech-icon" width="26"
+                                                            height="26" alt="">
+                            <div class="tooltip"><img src="assets/icons/chatgpt.svg" width="26" height="26" alt="">
+                                <div><strong>ChatGPT</strong>
+                                    <p style="margin: 0; font-size: 16px;">Искусственный интеллект<br>для
+                                        общения</p></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </a>
 
-        <!-- NoticeMe -->
-        <a href="https://discord.com/oauth2/authorize?client_id=1039911109911658557"
-           target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.com/oauth2/authorize?client_id=1039911109911658557" target="_blank">
             <div class="project-card">
-                <img src="assets/images/noticeMe.png" alt="NoticeMe"
-                     class="project-image"
-                     width="400" height="250"
-                     loading="lazy" decoding="async">
+                <img src="assets/images/noticeMe.png" alt="NoticeMe" class="project-image">
                 <div class="project-info">
                     <h4>NoticeMe</h4>
                     <p class="description">Discord бот для уведомлений.</p>
+                    <div class="tech-stack">
+                        <div class="tech-icon-wrapper"><img src="assets/icons/spring boot.svg" class="tech-icon"
+                                                            width="25" height="25" alt="">
+                            <div class="tooltip"><img src="assets/icons/spring boot.svg" width="25" height="25" alt="">
+                                <div><strong>Spring Boot</strong>
+                                    <p style="margin: 0; font-size: 16px;">Фреймворк для создания<br>Java
+                                        приложений</p></div>
+                            </div>
+                        </div>
+                        <div class="tech-icon-wrapper"><img src="assets/icons/mariadb.svg" class="tech-icon" width="30"
+                                                            height="30" alt="">
+                            <div class="tooltip"><img src="assets/icons/mariadb.svg" width="30" height="30" alt="">
+                                <div><strong>MariaDB</strong>
+                                    <p style="margin: 0; font-size: 16px;">Открытая СУБД, форк MySQL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </a>
-
     </div>
 </main>
-
-
 
 <footer>
     <div class="footer-text">
