@@ -36,28 +36,6 @@ html[data-theme='dark'] {
     --switcher-hover-bg: rgba(255, 255, 255, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-    html[data-theme='auto'] {
-        --bg-color: #121212;
-        --text-color: #e1e1e1;
-        --heading-color: #e1e1e1;
-        --link-color: #e1e1e1;
-        --card-bg-color: #1e1e1e;
-        --card-hover-bg-color: #2a2a2a;
-        --card-shadow: none;
-        --project-link-color: #e1e1e1;
-        --description-color: #a0a0a0;
-        --footer-text-color: #e1e1e1;
-        --telegram-link-color: #e1e1e1;
-        --tooltip-bg-color: #2c2c2c;
-        --tooltip-text-color: #e1e1e1;
-        --tooltip-shadow: none;
-        --tooltip-border: 1px solid #444;
-        --switcher-hover-bg: rgba(255, 255, 255, 0.1);
-    }
-}
-
-
 body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-color);
