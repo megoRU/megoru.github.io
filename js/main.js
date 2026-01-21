@@ -7,19 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentThemeIndex = 0;
 
     function applyTheme(theme) {
-        // иконки
         root.setAttribute('data-theme', theme);
-
-        // сброс классов
-        body.classList.remove('light-theme', 'dark-theme');
-
-        if (theme === 'auto') {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
-        } else {
-            body.classList.add(`${theme}-theme`);
-        }
-
         localStorage.setItem('theme', theme);
         currentThemeIndex = themes.indexOf(theme);
     }
