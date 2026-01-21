@@ -15,8 +15,12 @@
 
     <script>
         (function () {
-            const savedTheme = localStorage.getItem('theme') || 'auto';
-            document.documentElement.setAttribute('data-theme', savedTheme);
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else {
+                document.documentElement.setAttribute('data-theme', 'auto');
+            }
         })();
     </script>
 

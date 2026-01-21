@@ -1,20 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
+    const themeSwitcher = document.querySelector('.theme-switcher');
+    const root = document.documentElement;
+    const body = document.body;
 
-    const applyTheme = (theme) => {
-        html.setAttribute('data-theme', theme);
+    const themes = ['light', 'dark', 'auto'];
+    let currentThemeIndex = 0;
+
+    function applyTheme(theme) {
+        // иконки
+        root.setAttribute('data-theme', theme);
+
+        // сброс классов
+        body.classList.remove('light-theme', 'dark-theme');
+
+        if (theme === 'auto') {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
+        } else {
+            body.classList.add(`${theme}-theme`);
+        }
+
         localStorage.setItem('theme', theme);
-    };
+        currentThemeIndex = themes.indexOf(theme);
+    }
 
-    themeToggle.addEventListener('click', () => {
-        const current = localStorage.getItem('theme') || 'auto';
+    themeSwitcher.addEventListener('click', () => {
+        currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+        applyTheme(themes[currentThemeIndex]);
+    });
 
-        const next =
-            current === 'auto' ? 'light' :
-                current === 'light' ? 'dark' :
-                    'auto';
+    applyTheme(localStorage.getItem('theme') || 'auto');
 
-        applyTheme(next);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (localStorage.getItem('theme') === 'auto') {
+            applyTheme('auto');
+        }
     });
 });
