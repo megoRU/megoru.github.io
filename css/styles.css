@@ -224,6 +224,21 @@ footer .footer-text .order {
     margin-bottom: 10px;
 }
 
+.status-badge {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+
+    padding: 8px 18px;
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    backdrop-filter: blur(6px);
+}
+
 .footer-text p {
     margin: 0;
     text-align: left;
@@ -374,6 +389,24 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
     a:visited {
         text-decoration: none;
         color: inherit;
+    }
+}
+
+/* светлая тема */
+@media (prefers-color-scheme: light) {
+    .status-badge {
+        color: rgba(0, 90, 200, 0.9);
+        background: rgba(0, 90, 200, 0.12);
+        border: 0 solid rgba(0, 90, 200, 0.5);
+    }
+}
+
+/* тёмная тема */
+@media (prefers-color-scheme: dark) {
+    .status-badge {
+        color: rgba(0, 150, 255, 0.9);
+        background: rgba(0, 150, 255, 0.08);
+        border: 0 solid rgba(0, 150, 255, 0.4);
     }
 }
 
