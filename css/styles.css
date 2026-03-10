@@ -164,17 +164,15 @@ main h3 {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin: 0 auto;
-    justify-content: center;
 }
 
 .project-card {
     padding: 0;
     text-align: left;
     position: relative;
-    transition: transform 0.3s ease;
 }
 
 .project-image-container {
@@ -402,7 +400,7 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
     }
 
     .projects {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
@@ -441,6 +439,12 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
     }
 }
 
+
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 480px) {
     .social-links-container {
