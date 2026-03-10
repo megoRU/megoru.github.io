@@ -84,7 +84,7 @@ body {
 
 header {
     position: relative;
-    padding: 40px 20px 20px;
+    padding: 0 20px 0;
 }
 
 html {
@@ -173,12 +173,13 @@ main h3 {
     padding: 0;
     text-align: left;
     position: relative;
+    margin-bottom: 32px;
 }
 
 .project-image-container {
     position: relative;
-    width: 100%;
-    height: 160px;
+    width: 402px;
+    height: 211px;
     border-radius: 24px;
     overflow: hidden;
     background: var(--card-bg-color);
@@ -221,6 +222,11 @@ a:visited {
     color: var(--description-color);
     font-size: 15px;
     line-height: 1.5;
+}
+
+p.description {
+    margin: 0;
+    padding: 0;
 }
 
 .tech-stack {
@@ -339,7 +345,7 @@ img, svg {
     line-height: 0;
     transition: background-color 0.2s ease-in-out;
     position: relative; /* Contain the icons */
-    width: 40px;  /* Explicit size */
+    width: 40px; /* Explicit size */
     height: 40px; /* Explicit size */
 }
 
@@ -386,7 +392,7 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
 /* Media Queries */
 @media (max-width: 768px) {
     header {
-        padding: 40px 20px 20px;
+        padding: 0 20px 0;
     }
 
     .header-content {
