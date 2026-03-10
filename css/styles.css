@@ -4,9 +4,9 @@
     --heading-color: #252525;
     --link-color: #252525;
     --accent-color: #5bbf6a;
-    --card-bg-color: white;
-    --card-hover-bg-color: #f8fff9;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    --card-bg-color: transparent;
+    --card-hover-bg-color: rgba(91, 191, 106, 0.05);
+    --card-shadow: none;
     --project-link-color: #252525;
     --description-color: #838485;
     --footer-text-color: #252525;
@@ -27,9 +27,9 @@ html[data-theme='dark'] {
     --heading-color: #e1ede5;
     --link-color: #e1ede5;
     --accent-color: #5bbf6a;
-    --card-bg-color: #161e1a;
-    --card-hover-bg-color: #1d2822;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --card-bg-color: transparent;
+    --card-hover-bg-color: rgba(255, 255, 255, 0.03);
+    --card-shadow: none;
     --project-link-color: #e1ede5;
     --description-color: #a0aca4;
     --footer-text-color: #e1ede5;
@@ -51,9 +51,9 @@ html[data-theme='dark'] {
         --heading-color: #e1ede5;
         --link-color: #e1ede5;
         --accent-color: #5bbf6a;
-        --card-bg-color: #161e1a;
-        --card-hover-bg-color: #1d2822;
-        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        --card-bg-color: transparent;
+        --card-hover-bg-color: rgba(255, 255, 255, 0.03);
+        --card-shadow: none;
         --project-link-color: #e1ede5;
         --description-color: #a0aca4;
         --footer-text-color: #e1ede5;
@@ -70,13 +70,17 @@ html[data-theme-ready] body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
     transition: none;
     line-height: 1.6;
     letter-spacing: -0.01em;
@@ -84,7 +88,7 @@ body {
 
 header {
     position: relative;
-    padding: 0 20px 0;
+    padding: 0;
 }
 
 html {
@@ -94,6 +98,7 @@ html {
 .header-content {
     padding: 10px 20px;
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -117,7 +122,7 @@ html {
 .social-links-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between social icons and theme switcher */
+    gap: 20px;
 }
 
 .social-links {
@@ -131,7 +136,7 @@ html {
     font-size: 24px;
     color: var(--link-color);
     text-decoration: none;
-    line-height: 0; /* Aligns icons better */
+    line-height: 0;
 }
 
 .social-links a img, .social-links a svg {
@@ -149,7 +154,6 @@ html {
 main {
     padding: 20px 20px 40px;
     width: 100%;
-    box-sizing: border-box;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -169,21 +173,38 @@ main h3 {
     margin: 0 auto;
 }
 
+.projects a {
+    color: var(--project-link-color);
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
 .project-card {
-    padding: 0;
+    padding: 12px;
     text-align: left;
     position: relative;
-    margin-bottom: 32px;
     border-radius: 24px;
     overflow: hidden;
     background: var(--card-bg-color);
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    background-color: var(--card-hover-bg-color);
 }
 
 .project-image-container {
     position: relative;
     width: 100%;
     aspect-ratio: 402 / 211;
+    border-radius: 24px;
     overflow: hidden;
+    background: transparent;
+    flex-shrink: 0;
 }
 
 .project-image {
@@ -198,18 +219,11 @@ main h3 {
     transform: scale(1.05);
 }
 
-.projects a {
-    color: var(--project-link-color);
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-    color: inherit;
-}
-
 .project-info {
-    padding: 16px 20px 20px;
+    padding: 16px 0 8px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-info h4 {
@@ -231,23 +245,23 @@ p.description {
 }
 
 .tech-stack {
-    margin-top: 10px;
+    margin-top: auto;
+    padding-top: 12px;
     font-size: 20px;
     display: flex;
     align-items: center;
-    margin-right: 20px;
-}
-
-.tech-stack img {
-    margin-right: 8px;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 footer {
     padding: 80px 20px;
     color: var(--footer-text-color);
+    display: flex;
     justify-content: flex-start;
     align-items: center;
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -257,8 +271,7 @@ footer {
 }
 
 footer .footer-text {
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 footer .footer-text .order {
@@ -287,7 +300,6 @@ footer .footer-text .order {
 
 .footer-text p {
     margin: 0;
-    text-align: left;
     font-size: 18px;
 }
 
@@ -345,9 +357,9 @@ img, svg {
     border-radius: 50%;
     line-height: 0;
     transition: background-color 0.2s ease-in-out;
-    position: relative; /* Contain the icons */
-    width: 40px; /* Explicit size */
-    height: 40px; /* Explicit size */
+    position: relative;
+    width: 40px;
+    height: 40px;
 }
 
 .theme-switcher button:hover {
@@ -362,19 +374,19 @@ img, svg {
     height: 24px;
     transform: scale(0);
     transition: transform 0.3s ease;
-    position: absolute; /* Allows them to overlap */
+    position: absolute;
     top: 8px;
     left: 8px;
 }
 
 .theme-switcher svg {
     stroke: var(--heading-color);
-    fill: none; /* Ensure only stroke is used for sun/moon */
+    fill: none;
 }
 
 .theme-switcher .icon-auto {
-    fill: var(--heading-color); /* Use fill for the auto icon */
-    stroke: none; /* Do not use stroke for the auto icon */
+    fill: var(--heading-color);
+    stroke: none;
 }
 
 html[data-theme='light'] .theme-switcher .icon-sun {
@@ -391,11 +403,13 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
 
 
 /* Media Queries */
-@media (max-width: 768px) {
-    header {
-        padding: 0 20px 0;
+@media (max-width: 1024px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
+@media (max-width: 768px) {
     .header-content {
         flex-direction: column;
         text-align: center;
@@ -406,42 +420,25 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
         font-size: 32px;
     }
 
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .project-card {
-        margin: 0;
-    }
-
-    .project-info {
-        padding: 16px 20px 20px;
-    }
-
-    .tech-stack {
-        font-size: 18px;
-    }
-
     .tooltip {
         display: none;
     }
 
-    a {
-        color: var(--project-link-color);
-        text-decoration: none;
-    }
-
-    a:visited {
-        text-decoration: none;
-        color: inherit;
-    }
-
     footer {
         padding: 40px 20px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-text p {
+        text-align: center;
+    }
+
+    footer .footer-text {
+        margin-right: 0;
     }
 }
-
 
 @media (max-width: 600px) {
     .projects {
@@ -450,12 +447,6 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
 }
 
 @media (max-width: 480px) {
-    .social-links-container {
-        position: static; /* Revert positioning for small screens */
-        justify-content: center; /* Center the icons */
-        padding-bottom: 15px;
-    }
-
     .intro h1 {
         font-size: 25px;
     }
