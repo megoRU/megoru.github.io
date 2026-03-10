@@ -93,7 +93,7 @@ html {
 
 .header-content {
     padding: 10px 20px;
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -150,7 +150,7 @@ main {
     padding: 20px 20px 40px;
     width: 100%;
     box-sizing: border-box;
-    max-width: 1040px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -164,35 +164,38 @@ main h3 {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 24px;
     margin: 0 auto;
     justify-content: center;
 }
 
 .project-card {
-    will-change: background-color;
-    box-shadow: var(--card-shadow);
-    background: var(--card-bg-color);
     padding: 0;
-    border-radius: 24px;
-    overflow: hidden;
     text-align: left;
     position: relative;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
 
-html[data-theme='dark'] .project-card {
-    border: 1px solid rgba(255, 255, 255, 0.05);
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--card-bg-color);
 }
 
 .project-image {
     width: 100%;
-    height: 160px;
+    height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 24px 24px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
 }
 
 .projects a {
@@ -205,17 +208,8 @@ a:visited {
     color: inherit;
 }
 
-.project-card:hover {
-    background-color: var(--card-hover-bg-color);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-html[data-theme='dark'] .project-card:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
 .project-info {
-    padding: 20px;
+    padding: 16px 0 0;
 }
 
 .project-info h4 {
@@ -248,7 +242,7 @@ footer {
     color: var(--footer-text-color);
     justify-content: flex-start;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -270,8 +264,8 @@ footer .footer-text .order {
 
 .status-badge {
     position: absolute;
-    right: 14px;
-    bottom: 14px;
+    right: 12px;
+    top: 12px;
 
     padding: 6px 14px;
     border-radius: 100px;
@@ -408,7 +402,7 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
     }
 
     .projects {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 20px;
     }
 
