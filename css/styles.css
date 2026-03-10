@@ -83,7 +83,9 @@ body {
     text-align: left;
     transition: none;
     line-height: 1.6;
-    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 header {
@@ -111,7 +113,6 @@ html {
     font-weight: 700;
     color: var(--heading-color);
     margin-bottom: 8px;
-    letter-spacing: -0.03em;
 }
 
 .intro p.description {
@@ -162,7 +163,6 @@ main h3 {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 32px;
-    letter-spacing: -0.02em;
     text-align: left;
 }
 
@@ -229,7 +229,6 @@ main h3 {
     font-size: 18px;
     font-weight: 600;
     margin: 0 0 8px;
-    letter-spacing: -0.01em;
 }
 
 .description {
