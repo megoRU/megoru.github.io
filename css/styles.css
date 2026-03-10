@@ -174,15 +174,16 @@ main h3 {
     text-align: left;
     position: relative;
     margin-bottom: 32px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--card-bg-color);
 }
 
 .project-image-container {
     position: relative;
-    width: 402px;
-    height: 211px;
-    border-radius: 24px;
+    width: 100%;
+    aspect-ratio: 402 / 211;
     overflow: hidden;
-    background: var(--card-bg-color);
 }
 
 .project-image {
@@ -208,7 +209,7 @@ a:visited {
 }
 
 .project-info {
-    padding: 16px 0 0;
+    padding: 16px 20px 20px;
 }
 
 .project-info h4 {
@@ -414,12 +415,8 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
         margin: 0;
     }
 
-    .project-image {
-        height: 200px;
-    }
-
     .project-info {
-        padding: 20px;
+        padding: 16px 20px 20px;
     }
 
     .tech-stack {
