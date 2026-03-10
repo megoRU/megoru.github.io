@@ -4,7 +4,7 @@
     --heading-color: #252525;
     --link-color: #252525;
     --accent-color: #5bbf6a;
-    --card-bg-color: #ffffff;
+    --card-bg-color: transparent;
     --card-hover-bg-color: rgba(91, 191, 106, 0.12);
     --card-shadow: none;
     --project-link-color: #252525;
@@ -27,7 +27,7 @@ html[data-theme='dark'] {
     --heading-color: #e1ede5;
     --link-color: #e1ede5;
     --accent-color: #5bbf6a;
-    --card-bg-color: #161b18;
+    --card-bg-color: transparent;
     --card-hover-bg-color: rgba(255, 255, 255, 0.08);
     --card-shadow: none;
     --project-link-color: #e1ede5;
@@ -51,7 +51,7 @@ html[data-theme='dark'] {
         --heading-color: #e1ede5;
         --link-color: #e1ede5;
         --accent-color: #5bbf6a;
-        --card-bg-color: #161b18;
+        --card-bg-color: transparent;
         --card-hover-bg-color: rgba(255, 255, 255, 0.08);
         --card-shadow: none;
         --project-link-color: #e1ede5;
@@ -168,7 +168,7 @@ main h3 {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin: 0 auto;
 }
@@ -190,7 +190,6 @@ main h3 {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow: hidden;
 }
 
 .project-card:hover {
@@ -219,7 +218,7 @@ main h3 {
 }
 
 .project-info {
-    padding: 16px 24px 24px;
+    padding: 16px 16px 24px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -411,7 +410,7 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
 /* Media Queries */
 @media (max-width: 1024px) {
     .projects {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
