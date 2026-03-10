@@ -185,7 +185,6 @@ main h3 {
     text-align: left;
     position: relative;
     border-radius: 24px;
-    overflow: hidden;
     background: var(--card-bg-color);
     transition: background-color 0.3s ease;
     display: flex;
@@ -219,7 +218,7 @@ main h3 {
 }
 
 .project-info {
-    padding: 16px 16px 8px;
+    padding: 16px 16px 24px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -310,7 +309,7 @@ footer .footer-text .order {
 .tech-icon-wrapper:hover .tooltip {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 }
 
 img, svg {
@@ -319,16 +318,16 @@ img, svg {
 
 .tooltip {
     position: absolute;
-    bottom: calc(100% + 12px);
-    left: 50%;
-    transform: translateX(-50%) translateY(4px);
+    top: calc(100% + 8px);
+    left: 0;
+    transform: translateY(-4px);
     pointer-events: none;
     background-color: var(--tooltip-bg-color);
     color: var(--tooltip-text-color);
-    padding: 15px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    white-space: nowrap;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    width: 200px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -336,14 +335,22 @@ img, svg {
     border: var(--tooltip-border);
     z-index: 100;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 160px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
     text-align: left;
 }
 
+.tooltip strong {
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
 .tooltip p {
-    padding-top: 5px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--description-color);
 }
 
 /* Theme Switcher Styles */
