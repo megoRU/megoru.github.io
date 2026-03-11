@@ -315,6 +315,11 @@ footer .footer-text .order {
 }
 
 .tooltip {
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.tooltip {
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
@@ -325,28 +330,45 @@ footer .footer-text .order {
     padding: 12px 16px;
     border-radius: 12px;
     font-size: 14px;
-    width: 200px;
+    width: 300px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
     box-shadow: var(--tooltip-shadow);
     border: var(--tooltip-border);
     z-index: 100;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    text-align: left;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 8px 10px;
+    align-items: start;
+}
+
+.tooltip img,
+.tooltip svg {
+    grid-row: span 2;
 }
 
 .tooltip strong {
+    font-weight: 600;
+}
+
+.tooltip p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+.tooltip strong {
+    font-size: 17px;
     font-weight: 600;
     color: var(--heading-color);
 }
 
 .tooltip p {
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.4;
     color: var(--description-color);
 }
