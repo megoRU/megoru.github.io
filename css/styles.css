@@ -19,6 +19,7 @@
     --tooltip-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     --tooltip-border: none;
     --switcher-hover-bg: rgba(0, 0, 0, 0.04);
+    --switcher-hover-bg-analog: rgb(17 17 17 / 0.04);
 }
 
 html[data-theme='dark'] {
@@ -136,19 +137,21 @@ html {
 }
 
 .social-links a {
-    transition: filter 0.1s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
     font-size: 24px;
     color: var(--link-color);
     text-decoration: none;
     line-height: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-.social-links a img, .social-links a svg {
-    transition: transform 0.2s ease-in-out;
-}
-
-.social-links a:hover img, .social-links a:hover svg {
-    transform: scale(1.1);
+.social-links a:hover {
+    background-color: var(--switcher-hover-bg);
 }
 
 .github-icon, .pwa-icon {
