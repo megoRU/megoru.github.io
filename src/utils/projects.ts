@@ -1,0 +1,116 @@
+import { Project } from '../types';
+
+export const projects: Project[] = [
+  {
+    id: 'yetanothersshclient',
+    title: 'YetAnotherSSHClient',
+    description: 'Простой и быстрый SSH клиент',
+    image: '/assets/images/YetAnotherSSHClient.png',
+    link: 'https://github.com/megoRU/YetAnotherSSHClient',
+    techStack: [
+      { name: 'ReactJS', icon: 'https://thesvg.org/icons/react/default.svg', description: 'Библиотека для создания интерфейсов на JavaScript' },
+      { name: 'Electron', icon: 'https://thesvg.org/icons/electron/default.svg', description: 'Фреймворк для создания десктопных приложений на JavaScript' },
+    ],
+    status: 'LTS',
+  },
+  {
+    id: 'youtubetimecode',
+    title: 'YouTube | Таймкоды',
+    description: 'Генератор таймкодов YouTube',
+    image: '/assets/images/youtubetimecode.png',
+    link: 'https://t.me/YouTubeTimecodeBot',
+    techStack: [
+      { name: 'Spring Boot', icon: 'https://thesvg.org/icons/spring/default.svg', description: 'Фреймворк для создания Java приложений' },
+      { name: 'MariaDB', icon: 'https://thesvg.org/icons/mariadb/default.svg', description: 'Открытая СУБД, форк MySQL' },
+      { name: 'ChatGPT', icon: 'https://thesvg.org/icons/openai/default.svg', description: 'Искусственный интеллект для общения' },
+    ],
+    status: 'Closed',
+  },
+  {
+    id: 'diskoncard',
+    title: 'DiskonCard',
+    description: 'Сервис для удобного хранения бонусных карт',
+    image: '/assets/images/diskoncard.png',
+    link: 'https://diskoncard.megoru.ru',
+    techStack: [
+      { name: 'ReactJS', icon: 'https://thesvg.org/icons/react/default.svg', description: 'Библиотека для создания интерфейсов на JavaScript' },
+      { name: 'PWA', icon: 'https://thesvg.org/icons/pwa/default.svg', description: 'Веб-приложение работающее офлайн, как нативное' },
+    ],
+    status: 'Closed',
+  },
+  {
+    id: 'vpn-project',
+    title: 'Какой-то проект с VPN',
+    description: 'Телеграм бот',
+    image: '/assets/images/vpn.png',
+    link: 'https://megoru.ru',
+    techStack: [
+      { name: 'Spring Boot', icon: 'https://thesvg.org/icons/spring/default.svg', description: 'Фреймворк для создания Java приложений' },
+      { name: 'MariaDB', icon: 'https://thesvg.org/icons/mariadb/default.svg', description: 'Открытая СУБД, форк MySQL' },
+      { name: 'ChatGPT', icon: 'https://thesvg.org/icons/openai/default.svg', description: 'Искусственный интеллект для общения' },
+    ],
+    status: 'Confidential',
+  },
+  {
+    id: 'scanfit',
+    title: 'ScanFit',
+    description: 'Telegram бот для расчета КБЖУ',
+    image: '/assets/images/scanFit.jpg',
+    link: 'https://t.me/scan_fit_bot',
+    techStack: [
+      { name: 'Spring Boot', icon: 'https://thesvg.org/icons/spring/default.svg', description: 'Фреймворк для создания Java приложений' },
+      { name: 'MariaDB', icon: 'https://thesvg.org/icons/mariadb/default.svg', description: 'Открытая СУБД, форк MySQL' },
+      { name: 'ChatGPT', icon: 'https://thesvg.org/icons/openai/default.svg', description: 'Искусственный интеллект для общения' },
+    ],
+    status: 'Closed',
+  },
+  {
+    id: 'rconf',
+    title: 'RConf',
+    description: 'Реализация поддержки в Telegram',
+    image: '/assets/images/rconf.png',
+    link: 'https://rconf.ru',
+    techStack: [
+      { name: 'Spring Boot', icon: 'https://thesvg.org/icons/spring/default.svg', description: 'Фреймворк для создания Java приложений' },
+      { name: 'MariaDB', icon: 'https://thesvg.org/icons/mariadb/default.svg', description: 'Открытая СУБД, форк MySQL' },
+    ],
+    status: 'Unknown',
+  },
+  {
+    id: 'giveaway',
+    title: 'Giveaway',
+    description: 'Discord бот для определения победителей.',
+    image: '/assets/images/giveaway.png',
+    link: 'https://discord.com/oauth2/authorize?client_id=808277484524011531',
+    techStack: [
+      { name: 'Spring Boot', icon: 'https://thesvg.org/icons/spring/default.svg', description: 'Фреймворк для создания Java приложений' },
+      { name: 'MariaDB', icon: 'https://thesvg.org/icons/mariadb/default.svg', description: 'Открытая СУБД, форк MySQL' },
+    ],
+    status: 'LTS',
+  },
+  {
+    id: 'hangman',
+    title: 'Hangman',
+    description: 'Discord бот для игры в Виселицу.',
+    image: '/assets/images/hangman.png',
+    link: 'https://discord.com/oauth2/authorize?client_id=845974873682608129',
+    techStack: [
+      { name: 'Spring Boot', icon: 'https://thesvg.org/icons/spring/default.svg', description: 'Фреймворк для создания Java приложений' },
+      { name: 'MariaDB', icon: 'https://thesvg.org/icons/mariadb/default.svg', description: 'Открытая СУБД, форк MySQL' },
+      { name: 'ChatGPT', icon: 'https://thesvg.org/icons/openai/default.svg', description: 'Искусственный интеллект для общения' },
+    ],
+    status: 'LTS',
+  },
+  {
+    id: 'noticeme',
+    title: 'NoticeMe',
+    description: 'Discord бот для уведомлений.',
+    image: '/assets/images/noticeMe.png',
+    link: 'https://discord.com/oauth2/authorize?client_id=1039911109911658557',
+    techStack: [
+      { name: 'Spring Boot', icon: 'https://thesvg.org/icons/spring/default.svg', description: 'Фреймворк для создания Java приложений' },
+      { name: 'MariaDB', icon: 'https://thesvg.org/icons/mariadb/default.svg', description: 'Открытая СУБД, форк MySQL' },
+    ],
+    status: 'LTS',
+  },
+];

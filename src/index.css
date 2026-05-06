@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+    --bg-color: #f2fff5;
+    --text-color: #252525;
+    --heading-color: #252525;
+    --link-color: #252525;
+    --accent-color: #5bbf6a;
+    --card-bg-color: #ffffff;
+    --card-hover-bg-color: #f8fff9;
+    --card-shadow: none;
+    --project-link-color: #252525;
+    --description-color: #64748b;
+    --footer-text-color: #252525;
+    --telegram-link-color: #5bbf6a;
+    --badge-text: #3d9a4c;
+    --badge-bg: rgba(91, 191, 106, 0.1);
+    --badge-border: rgba(91, 191, 106, 0.2);
+    --tooltip-bg-color: white;
+    --tooltip-text-color: #252525;
+    --tooltip-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --tooltip-border: rgba(0, 0, 0, 0.05);
+    --switcher-hover-bg: rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme='dark'] {
+    --bg-color: #0d1310;
+    --text-color: #e1ede5;
+    --heading-color: #f8fafc;
+    --link-color: #e1ede5;
+    --accent-color: #5bbf6a;
+    --card-bg-color: #161b18;
+    --card-hover-bg-color: #1c231f;
+    --card-shadow: none;
+    --project-link-color: #e1ede5;
+    --description-color: #94a3b8;
+    --footer-text-color: #e1ede5;
+    --telegram-link-color: #5bbf6a;
+    --badge-text: #5bbf6a;
+    --badge-bg: rgba(91, 191, 106, 0.15);
+    --badge-border: rgba(91, 191, 106, 0.3);
+    --tooltip-bg-color: #1d2822;
+    --tooltip-text-color: #e1ede5;
+    --tooltip-shadow: none;
+    --tooltip-border: #2d3a33;
+    --switcher-hover-bg: rgba(255, 255, 255, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    html[data-theme='auto'] {
+        --bg-color: #0d1310;
+        --text-color: #e1ede5;
+        --heading-color: #f8fafc;
+        --link-color: #e1ede5;
+        --accent-color: #5bbf6a;
+        --card-bg-color: #161b18;
+        --card-hover-bg-color: #1c231f;
+        --card-shadow: none;
+        --project-link-color: #e1ede5;
+        --description-color: #94a3b8;
+        --footer-text-color: #e1ede5;
+        --telegram-link-color: #5bbf6a;
+        --badge-text: #5bbf6a;
+        --badge-bg: rgba(91, 191, 106, 0.15);
+        --badge-border: rgba(91, 191, 106, 0.3);
+        --tooltip-bg-color: #1d2822;
+        --tooltip-text-color: #e1ede5;
+        --tooltip-shadow: none;
+        --tooltip-border: #2d3a33;
+        --switcher-hover-bg: rgba(255, 255, 255, 0.05);
+    }
+}
+
+body {
+    @apply antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
